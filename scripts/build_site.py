@@ -72,7 +72,7 @@ def build():
     data=dict(documents=documents,config=config,thresholds=thresholds,proofs=proofs,
               blockers=freeze_errors(config,thresholds,read(BENCH/'QUESTIONS.json'),{d['id']:d for d in documents}),
               answers=answers,paper=(ROOT/'Devs2.0-EFMW.md').read_text(),
-              prompts={p.name:p.read_text() for p in (BENCH/'arms').glob('*.txt')})
+              prompts={p.name:p.read_text() for p in sorted((BENCH/'arms').glob('*.txt'))})
     html=(ROOT/'web/template.html').read_text()
     html=html.replace('/*__STYLE__*/',(ROOT/'web/style.css').read_text())
     html=html.replace('/*__DATA__*/','window.DEVS_DATA='+json.dumps(data,ensure_ascii=False).replace('<','\\u003c')+';')
