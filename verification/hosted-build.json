@@ -1,0 +1,18 @@
+{
+  "kind": "SOFTWARE_AND_FORMAL_VERIFICATION_ONLY",
+  "observed_date": "2026-10-22",
+  "tested_commit": "002252260d0c695cec588033795befa1db9d555a",
+  "workflow_run": "https://github.com/enuminous/Devs2.0/actions/runs/39853542767",
+  "verification_job": 120085721633,
+  "verification_conclusion": "success",
+  "python_tests": 32,
+  "javascript_tests": 10,
+  "lean_toolchain": "leanprover/lean4:v4.28.0",
+  "audited_theorem_declarations": 45,
+  "software_fixture_responses": 60,
+  "software_fixture_model_calls": 0,
+  "human_scoring_performed": false,
+  "empirical_result": null,
+  "physics_validation": false,
+  "note": "Build verification succeeded on a standard hosted Ubuntu runner without the local launcher shim. This record makes no Pages deployment claim."
+}

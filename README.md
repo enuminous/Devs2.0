@@ -6,6 +6,8 @@ A self-contained browser workspace for Matthew Chenoweth Wright's **Devs 2.0: EF
 
 **DEV2-001 is DRAFT, NOT FROZEN. No confirmatory model experiment has run.** Matthew approved the **120 answerable / 240 absent / 120 contradictory** evaluation target and **20 percentage point** minimum absolute improvement. Approval of those two parameters does not approve the remaining design or create evidence of success. The reviewed holdout is not yet populated.
 
+![Devs 2.0 research desktop](docs/screenshots/desktop.jpg)
+
 ## Use the desktop
 
 Open `index.html` directly in a modern browser, or use the Pages link above. No npm dependencies, account, API key, analytics, or external script is required. The generated file embeds the paper, ten pinned document versions, prompts, and theorem catalog.
