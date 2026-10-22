@@ -1,0 +1,263 @@
+{
+  "repository": "enuminous/papers",
+  "commit": "f1c8f5d15e873174bad25a018adadd71557cb659",
+  "date": "2026-10-22",
+  "files": [
+    {
+      "path": "DEVS2-Protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f3e6a20b15e917a9d07c13eb1e7eb13b61fd394",
+      "size": 5163,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/9f3e6a20b15e917a9d07c13eb1e7eb13b61fd394"
+    },
+    {
+      "path": "Devs2.0-EFMW.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ac80aca13be135863c50a549e58e30d58caddaf",
+      "size": 17276,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/8ac80aca13be135863c50a549e58e30d58caddaf"
+    },
+    {
+      "path": "research/dev2-001/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd3a901ba80dee33eede50877ff02cdc9d711672",
+      "size": 28,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/cd3a901ba80dee33eede50877ff02cdc9d711672"
+    },
+    {
+      "path": "research/dev2-001/APPROVALS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5c4652c440fc7f2f1a3f5d5eae559db0c0d38df",
+      "size": 2489,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/b5c4652c440fc7f2f1a3f5d5eae559db0c0d38df"
+    },
+    {
+      "path": "research/dev2-001/CONFIG.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad10bb4fc2f23de4a9634ee7edfd31a98ea428d7",
+      "size": 2053,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/ad10bb4fc2f23de4a9634ee7edfd31a98ea428d7"
+    },
+    {
+      "path": "research/dev2-001/CORPUS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43adaabadbcbd34ca5d846b85a0abc0c07cd0afa",
+      "size": 3158,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/43adaabadbcbd34ca5d846b85a0abc0c07cd0afa"
+    },
+    {
+      "path": "research/dev2-001/DESIGN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b87a643f2126a8ed4b8d42d4fa53dbbff32ff61",
+      "size": 7851,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/8b87a643f2126a8ed4b8d42d4fa53dbbff32ff61"
+    },
+    {
+      "path": "research/dev2-001/PROTOCOL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8d3674b5154437e6d6cc82fce5d442b3570dd52",
+      "size": 12906,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/a8d3674b5154437e6d6cc82fce5d442b3570dd52"
+    },
+    {
+      "path": "research/dev2-001/QUESTIONS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01018c9293ea904e90a721c3767dbfb0bdb76493",
+      "size": 144,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/01018c9293ea904e90a721c3767dbfb0bdb76493"
+    },
+    {
+      "path": "research/dev2-001/QUESTIONS.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8c3938ee4e979f2fbd87abd2ed8922141b0eb2b",
+      "size": 4165,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/c8c3938ee4e979f2fbd87abd2ed8922141b0eb2b"
+    },
+    {
+      "path": "research/dev2-001/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "421b6b95d8d93c2f490b3e26924f656e47dd4aa2",
+      "size": 3850,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/421b6b95d8d93c2f490b3e26924f656e47dd4aa2"
+    },
+    {
+      "path": "research/dev2-001/REPRODUCIBILITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "792496dddf437afccaab246caf9ac9016895c770",
+      "size": 10085,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/792496dddf437afccaab246caf9ac9016895c770"
+    },
+    {
+      "path": "research/dev2-001/RUN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63e09daae66f21205948d353d99402adefe687f0",
+      "size": 3069,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/63e09daae66f21205948d353d99402adefe687f0"
+    },
+    {
+      "path": "research/dev2-001/SCORING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5804812e9ed53f37bfbd5a1a843411d0b67072d8",
+      "size": 5183,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/5804812e9ed53f37bfbd5a1a843411d0b67072d8"
+    },
+    {
+      "path": "research/dev2-001/SOURCE_AUDIT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5185efe2c3536fd2b6f29acce1f805874a26508",
+      "size": 4538,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/c5185efe2c3536fd2b6f29acce1f805874a26508"
+    },
+    {
+      "path": "research/dev2-001/THRESHOLDS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66e46a370d8fc7e0646de9706fc5b8028b405462",
+      "size": 2421,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/66e46a370d8fc7e0646de9706fc5b8028b405462"
+    },
+    {
+      "path": "research/dev2-001/analyze.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78e208b86a9da5ab0d99de40a7c481abfe9a5690",
+      "size": 9511,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/78e208b86a9da5ab0d99de40a7c481abfe9a5690"
+    },
+    {
+      "path": "research/dev2-001/arms/A-plain.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8c0a89c31436080d24f2f1b5bb38ded313baec1",
+      "size": 116,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/b8c0a89c31436080d24f2f1b5bb38ded313baec1"
+    },
+    {
+      "path": "research/dev2-001/arms/B-status.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a93350dfef1ca72025db2454a694d110ce46535d",
+      "size": 586,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/a93350dfef1ca72025db2454a694d110ce46535d"
+    },
+    {
+      "path": "research/dev2-001/arms/C-critic.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5cc1523377f2ececb6711d0d0b20fccf7885804",
+      "size": 575,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/d5cc1523377f2ececb6711d0d0b20fccf7885804"
+    },
+    {
+      "path": "research/dev2-001/arms/C-revise.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed76ce83f9b97e6039e419266712a5c5f5b33339",
+      "size": 466,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/ed76ce83f9b97e6039e419266712a5c5f5b33339"
+    },
+    {
+      "path": "research/dev2-001/arms/D-cite-abstain.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb7e51770ebd940ab1eaed91ed11404bf69bfb6e",
+      "size": 368,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/fb7e51770ebd940ab1eaed91ed11404bf69bfb6e"
+    },
+    {
+      "path": "research/dev2-001/arms/E-feedback.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02bb8e1fe38d8d8523dc6da4186167f86eefc2f6",
+      "size": 298,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/02bb8e1fe38d8d8523dc6da4186167f86eefc2f6"
+    },
+    {
+      "path": "research/dev2-001/arms/E-revise.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45122b6d0cd15ce978266a5a7c4f29125c2b1b06",
+      "size": 182,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/45122b6d0cd15ce978266a5a7c4f29125c2b1b06"
+    },
+    {
+      "path": "research/dev2-001/arms/common.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cd808b26383f37eb6ac743240f6e63fc2c3863a",
+      "size": 944,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/3cd808b26383f37eb6ac743240f6e63fc2c3863a"
+    },
+    {
+      "path": "research/dev2-001/core.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9754cbbeba34ae6af6aa8c5b8e88b2bf5fb5e2a",
+      "size": 10876,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/a9754cbbeba34ae6af6aa8c5b8e88b2bf5fb5e2a"
+    },
+    {
+      "path": "research/dev2-001/development/QUESTIONS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "004c5beab28a6a1d6042e2a7ef8e9940b052b0ed",
+      "size": 18050,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/004c5beab28a6a1d6042e2a7ef8e9940b052b0ed"
+    },
+    {
+      "path": "research/dev2-001/planning.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff9182585b7a5b362e53cbf1c3b0bb3e8e06838c",
+      "size": 1036,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/ff9182585b7a5b362e53cbf1c3b0bb3e8e06838c"
+    },
+    {
+      "path": "research/dev2-001/prepare.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2268eb1d34d0df0f5326cbaa3871dfc8d4ffbdae",
+      "size": 1477,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/2268eb1d34d0df0f5326cbaa3871dfc8d4ffbdae"
+    },
+    {
+      "path": "research/dev2-001/run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be02a4da23571e00c4e0817cbd7a6f45199dd609",
+      "size": 6794,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/be02a4da23571e00c4e0817cbd7a6f45199dd609"
+    },
+    {
+      "path": "research/dev2-001/score.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d09e0c808f6851dcead3aaa49eb48f749a94ab6f",
+      "size": 8322,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/d09e0c808f6851dcead3aaa49eb48f749a94ab6f"
+    },
+    {
+      "path": "research/dev2-001/tests/test_dev2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "059954c4216e9016f8830c26789ed59dd3d374d5",
+      "size": 15505,
+      "url": "https://api.github.com/repos/enuminous/papers/git/blobs/059954c4216e9016f8830c26789ed59dd3d374d5"
+    }
+  ]
+}
