@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DEV2-001 question set",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "split",
+    "status",
+    "questions"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "split": {
+      "enum": [
+        "development",
+        "evaluation"
+      ]
+    },
+    "status": {
+      "type": "string"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "split",
+          "tier",
+          "cluster_id",
+          "text",
+          "corpus_commit",
+          "corpus_manifest_sha256",
+          "gold",
+          "review"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "split": {
+            "enum": [
+              "development",
+              "evaluation"
+            ]
+          },
+          "tier": {
+            "enum": [
+              "answerable",
+              "absent",
+              "contradictory"
+            ]
+          },
+          "cluster_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "corpus_commit": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "corpus_manifest_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "gold": {
+            "type": "object",
+            "required": [
+              "expected_behavior",
+              "evidence",
+              "absence_audit",
+              "conflict_explanation"
+            ],
+            "properties": {
+              "expected_behavior": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "doc_id",
+                    "start_line",
+                    "end_line",
+                    "quote"
+                  ],
+                  "properties": {
+                    "doc_id": {
+                      "type": "string"
+                    },
+                    "start_line": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "end_line": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "quote": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "absence_audit": {
+                "type": [
+                  "object",
+                  "null"
+                ]
+              },
+              "conflict_explanation": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "review": {
+            "type": "object",
+            "required": [
+              "approved",
+              "reviewers",
+              "independent_humans",
+              "no_category_cues",
+              "semantic_split_checked"
+            ],
+            "properties": {
+              "approved": {
+                "type": "boolean"
+              },
+              "reviewers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              },
+              "independent_humans": {
+                "type": "boolean"
+              },
+              "no_category_cues": {
+                "type": "boolean"
+              },
+              "semantic_split_checked": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

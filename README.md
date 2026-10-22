@@ -1,0 +1,60 @@
+# Devs 2.0 — Research Desktop
+
+[Open the desktop](https://enuminous.github.io/Devs2.0/) · [White paper](Devs2.0-EFMW.md) · [Mathematics](docs/MATHEMATICS.md) · [DEV2-001](research/dev2-001/README.md) · [Build checks](https://github.com/enuminous/Devs2.0/actions)
+
+A self-contained browser workspace for Matthew Chenoweth Wright's **Devs 2.0: EFMW**: a versioned corpus assistant, explicit uncertainty, inspectable criticism, human agency, and a reproducible architecture benchmark. The original research remains in [enuminous/papers](https://github.com/enuminous/papers/blob/f1c8f5d15e873174bad25a018adadd71557cb659/Devs2.0-EFMW.md).
+
+**DEV2-001 is DRAFT, NOT FROZEN. No confirmatory model experiment has run.** Matthew approved the **120 answerable / 240 absent / 120 contradictory** evaluation target and **20 percentage point** minimum absolute improvement. Approval of those two parameters does not approve the remaining design or create evidence of success. The reviewed holdout is not yet populated.
+
+## Use the desktop
+
+Open `index.html` directly in a modern browser, or use the Pages link above. No npm dependencies, account, API key, analytics, or external script is required. The generated file embeds the paper, ten pinned document versions, prompts, and theorem catalog.
+
+- **Workbench:** deterministic corpus retrieval, four curated paper guides, exact revision/line citations, and an inspectable mechanical criticism pass.
+- **Corpus explorer:** search and read the pinned documents, including historical revisions.
+- **Possibility lab:** change priors and likelihoods, apply observations, advance a posterior, expand the hypothesis set, and inspect entropy. Zero total mass is rejected.
+- **Benchmark:** compare all five configurations, inspect unresolved gates, explore illustrative paired outcomes, and locally inspect an analysis JSON file.
+- **Formal proofs:** search 45 Lean statements across seven modules and inspect their assumptions and source.
+- **White paper and notebook:** read the full paper, retain research notes locally, and export/import a portable notebook.
+
+The assistant is a **local retrieval and rules engine**, not a hosted language model. A retrieved quotation is not automatically evidence for a broader claim. The browser criticism pass is distinct from the model criticism tested by DEV2-001. Notebook storage is specific to a browser/origin; export it for backup. The site executes no external consequential actions.
+
+## Build and verify
+
+Requirements: Python **3.12.14**, Node **22.16.0**, Git, and Lean **4.28.0**. Python and JavaScript use only their standard libraries. Lean uses its bundled `Std`; there is no Mathlib dependency or unresolved proof placeholder.
+
+```bash
+git clone https://github.com/enuminous/Devs2.0.git
+cd Devs2.0
+python3 scripts/verify.py
+lake build
+python3 scripts/check_lean.py
+python3 bench.py smoke --out /tmp/devs2-software-smoke
+```
+
+Install [Lean via its official instructions](https://lean-lang.org/install/) if `lake` is unavailable. `lean-toolchain` selects the exact release; `lakefile.toml` and `lake-manifest.json` define the library and `devs-check` executable. CI separately installs the official release archive with its pinned SHA-256 and runs all checks on a standard Ubuntu runner.
+
+`python3 scripts/build_site.py` regenerates root `index.html`, the isolated `_site/` deployment directory, the theorem catalog, and the axiom audit. Edit `web/`, `Devs/`, or the source research package, then rebuild; do not edit generated HTML by hand. Pages deploys only `_site/` after software, Lean, audit, and fixture checks pass. [Deployment guide](docs/DEPLOYMENT.md).
+
+The smoke command uses a deterministic **software fixture** and creates 60 responses plus blank scoring packets. It makes **zero model calls**, performs **zero human ratings**, and must remain `UNVERIFIED`. It is an integration check, not an experimental run.
+
+## Run the research protocol
+
+```bash
+python3 bench.py doctor
+python3 bench.py prepare --out /tmp/devs2-development-plan.json
+python3 bench.py planning
+python3 bench.py doctor --require-frozen
+```
+
+The final command **must fail in this draft**. Read the [protocol](research/dev2-001/PROTOCOL.md), [design comparison](research/dev2-001/DESIGN.md), [current design review](docs/DESIGN_REVIEW.md), [scoring manual](research/dev2-001/SCORING.md), and [reproduction instructions](research/dev2-001/REPRODUCIBILITY.md) before any model evaluation.
+
+The full package includes question schema, split/leakage validation, immutable corpus bytes and hashes, three primary configurations plus two conventional controls, exact-token budget enforcement, provider adapter contract and HTTPS transport, blind rating packets, disagreement adjudication, family-paired bootstrap analysis, threshold configuration, failure rules, and release instructions. An audited model gateway, reviewed held-out questions, human scoring assignments, and remaining approvals are still required for an actual experiment. No API spending is initiated by this repository or its CI.
+
+## What the formal work establishes
+
+The Lean project proves properties of explicit mathematical models: intersection and expansion of possibility sets; provenance/status distinctions and ranked dependency acyclicity; integer-weight updates; conditional criticism guarantees and counterexamples; revision-bound authorization; token arithmetic; and logical benchmark gates. These are conventional mathematical formalizations of architectural ideas. They are not a formalization of all EFMW physics, a correctness proof of Python/JavaScript, an accuracy theorem for a model, or proof of novelty. The mathematical companion states these boundaries individually.
+
+[Architecture](docs/ARCHITECTURE.md) · [Verification scope](verification/README.md) · [Import provenance](IMPORT.json) · [Changes from the source package](docs/IMPORT.md)
+
+No new blanket license is asserted over imported research or third-party work. Preserve the original attribution and resolve redistribution/licensing terms with the rights holder before uses requiring an additional license.

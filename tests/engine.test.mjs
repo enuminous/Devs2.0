@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {makeIndex,search,inspectCitation,criticize,posterior,normalize,entropy,pairedSummary,budget,validateNotebook} from '../web/engine.js';
+const docs=[{id:'d',commit:'a'.repeat(40),path:'paper.md',lines:['# A paper','Provenance records exact sources.','A simulation is not an observation.']}];
+test('retrieval preserves exact versioned passages',()=>{const h=search(makeIndex(docs),'provenance')[0];assert.equal(h.doc,'d');assert.ok(inspectCitation(h,docs));assert.equal(inspectCitation({...h,revision:'wrong'},docs),false);});
+test('unknown terms yield no evidence',()=>assert.deepEqual(search(makeIndex(docs),'xzqplm'),[]));
+test('critic never calls retrieval semantic validation',()=>{const checks=criticize(search(makeIndex(docs),'provenance'),docs);assert.ok(checks.some(c=>c.ok===null));assert.equal(criticize([],docs)[0].ok,false);});
+test('normalization refuses degenerate mass and negative weights',()=>{assert.equal(normalize([0,0]),null);assert.throws(()=>normalize([-1,1]));assert.throws(()=>normalize([Infinity,1]));});
+test('Bayesian illustration conserves mass and eliminates impossible support',()=>{assert.deepEqual(posterior([1,1],[1,0]),[1,0]);assert.deepEqual(posterior([0,1],[1,1]),[0,1]);assert.equal(posterior([1,1],[0,0]),null);assert.throws(()=>posterior([1],[2]));});
+test('entropy can increase under evidence',()=>{const prior=normalize([9,1]);assert.ok(entropy(posterior([9,1],[1/9,1]))>entropy(prior));});
+test('paired error counts produce a 20 percentage point gain',()=>{const s=pairedSummary(36,60,12,132);assert.equal(s.n,240);assert.equal(s.effect,.2);assert.equal(s.a,.4);assert.equal(s.c,.2);assert.throws(()=>pairedSummary(0,-1,0,5));});
+test('all critic stage tokens count',()=>assert.deepEqual(budget([{input:300,output:256},{input:556,output:256},{input:812,output:512}]),{input:1668,output:1024,total:2692}));
+test('notebook imports validate schema without interpreting markup',()=>{const note={title:'test',text:'<script>throw 1</script>',date:'2026-10-22'};assert.deepEqual(validateNotebook({format:'devs2-notebook-v1',notes:[note]}),[note]);assert.throws(()=>validateNotebook({format:'other',notes:[]}));});
+test('zero likelihood cannot conceal a negative prior',()=>assert.throws(()=>posterior([-1,2],[0,1])));

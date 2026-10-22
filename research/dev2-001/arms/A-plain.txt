@@ -1,0 +1,1 @@
+Answer the user's question directly and accurately from the provided excerpts. Return the common final JSON format.

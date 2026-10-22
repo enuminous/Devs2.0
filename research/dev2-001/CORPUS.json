@@ -1,0 +1,77 @@
+{
+  "status": "PINNED_DRAFT_CORPUS",
+  "anchor_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+  "scope": "Only these ten document versions; linked sites and other repository files are outside the closed corpus. Version changes are not automatically contradictions. Expansion requires a new manifest and question review.",
+  "documents": [
+    {
+      "id": "devs",
+      "repository": "enuminous/papers",
+      "commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "path": "Devs2.0-EFMW.md",
+      "sha256": "c643d706741632c94ad7115d9ecf6f5f3241ecda46f1f8d1c8508a687b16c175"
+    },
+    {
+      "id": "f001",
+      "repository": "enuminous/papers",
+      "commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "path": "EFMW-F001-Recursive-Coherence-Dynamics.md",
+      "sha256": "b1c6ed2705cf4e255618b44d192a751ad440e3c6090b5977f4d646fe4a83ce9e"
+    },
+    {
+      "id": "grid005",
+      "repository": "enuminous/papers",
+      "commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "path": "WORLD-GRID-005-Equal-Budget-Negative-Result.md",
+      "sha256": "640db39d98acba1bc81613e728b1085c986524ae45f449faf7c7082dc51c5e54"
+    },
+    {
+      "id": "r001",
+      "repository": "enuminous/papers",
+      "commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "path": "EFMW-Zoo-R001-Primordial-Recursion-Boundary.md",
+      "sha256": "1f852f46a9730bfcdca365d8d7f34362d56e8e7744eb2fa2481545eb6f7437ef"
+    },
+    {
+      "id": "me003",
+      "repository": "enuminous/papers",
+      "commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "path": "ME-003_Flat_Minkowski_Specialization_Discovery.md",
+      "sha256": "93ae2ce4924adfb52796466f79ebc3396489ef66f949cc05b7fa4c113efa61d3"
+    },
+    {
+      "id": "continuum",
+      "repository": "enuminous/papers",
+      "commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "path": "EFMW-C1-Scalar-Continuum-Bridge.md",
+      "sha256": "dd08f3fff4c401b36184826e11f576931f561837e05db125c3a7de50fe42b74d"
+    },
+    {
+      "id": "monitoring",
+      "repository": "enuminous/papers",
+      "commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "path": "Recursive-Coherence-Monitoring-Synthetic-Control-Degradation.md",
+      "sha256": "f2f11c9dfb53db3539e54e188bf7b37bc9e2f96f8109d462b784461a565510f1"
+    },
+    {
+      "id": "weaver",
+      "repository": "enuminous/papers",
+      "commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "path": "Weaver-OS-EFMW-Residual-Core-Formalization.md",
+      "sha256": "b7a3716c4c3a6f18a4d7cc57e940a6ff318caaf4a838549505f956ed6a0a6fe2"
+    },
+    {
+      "id": "r001-initial",
+      "repository": "enuminous/papers",
+      "commit": "2e7d8136cb3af4f008f4ca1a80b47b5e562d280e",
+      "path": "EFMW-Zoo-R001-Primordial-Recursion-Boundary.md",
+      "sha256": "b66e488996bf0362bfc584381d74085f6a6c3ace3f333d5c856c7e63eb462f77"
+    },
+    {
+      "id": "me003-initial",
+      "repository": "enuminous/papers",
+      "commit": "107fed78a58285a38fb979b09edb93cc07f2e78f",
+      "path": "ME-003_Flat_Minkowski_Specialization_Discovery.md",
+      "sha256": "1272961ae9787b666a08f8aca6841a243a4ddb1506d7bc6803249f4b1b9e8122"
+    }
+  ]
+}

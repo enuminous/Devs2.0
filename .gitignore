@@ -1,0 +1,10 @@
+.lake/
+__pycache__/
+*.pyc
+research/dev2-001/runs/
+research/dev2-001/private/
+_site/
+verification/local/
+.openai/
+node_modules/
+.DS_Store

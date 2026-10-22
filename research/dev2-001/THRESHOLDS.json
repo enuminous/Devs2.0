@@ -1,0 +1,73 @@
+{
+  "status": "DRAFT_NOT_FROZEN",
+  "approved_by": null,
+  "approved_at": null,
+  "approval_reference": null,
+  "recommendation_only": true,
+  "evaluation_counts": {
+    "answerable": 120,
+    "absent": 240,
+    "contradictory": 120
+  },
+  "minimum_clusters": {
+    "answerable": 120,
+    "absent": 240,
+    "contradictory": 120
+  },
+  "development_target_counts": {
+    "answerable": 15,
+    "absent": 30,
+    "contradictory": 15
+  },
+  "pass_absolute_improvement": 0.2,
+  "kill_upper_bound": 0.1,
+  "max_token_ratio": 1.5,
+  "min_answerable_success": 0.7,
+  "max_answerable_drop": 0.05,
+  "min_conflict_report": 0.7,
+  "bootstrap_draws": 20000,
+  "analysis_seed": 20261022,
+  "replication_effect_tolerance": 0.05,
+  "deterministic_analysis_tolerance": 1e-12,
+  "primary": "C vs A absent-tier family-macro false-assertion difference A minus C",
+  "interval": "paired evidence-family percentile bootstrap 95%",
+  "secondary_multiplicity": "Holm across five exploratory cluster sign-flip tests; not used to rescue primary",
+  "missing_data": "No imputation or response-based exclusion; incomplete run UNVERIFIED",
+  "kill_rule": "Upper 95% bound <= 0.10; a proposal replacing ambiguous point-estimate-only wording",
+  "equal_spend_sensitivity_ratio": 1.0,
+  "alternatives": {
+    "lower_margin": 0.1,
+    "higher_margin": 0.3,
+    "balanced_counts": [
+      160,
+      160,
+      160
+    ],
+    "primary_heavy_counts": [
+      60,
+      360,
+      60
+    ]
+  },
+  "approval_scope_note": "Top-level approved_by, approved_at, approval_reference and recommendation_only describe full-protocol approval. The parameter_approvals below record the two approved selections; remaining proposed settings and freeze are not approved.",
+  "parameter_approvals": {
+    "evaluation_counts": {
+      "value": {
+        "answerable": 120,
+        "absent": 240,
+        "contradictory": 120
+      },
+      "approved_by": "Matthew Chenoweth Wright",
+      "approved_at": "2026-10-22",
+      "date_timezone": "America/Los_Angeles",
+      "approval_reference": "APPROVALS.md#decision-2026-10-22-evaluation-mix-and-minimum-improvement"
+    },
+    "pass_absolute_improvement": {
+      "value": 0.2,
+      "approved_by": "Matthew Chenoweth Wright",
+      "approved_at": "2026-10-22",
+      "date_timezone": "America/Los_Angeles",
+      "approval_reference": "APPROVALS.md#decision-2026-10-22-evaluation-mix-and-minimum-improvement"
+    }
+  }
+}

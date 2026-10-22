@@ -1,0 +1,568 @@
+{
+  "schema_version": "1.0",
+  "split": "development",
+  "status": "UNREVIEWED_EXAMPLES_NOT_EVIDENCE",
+  "questions": [
+    {
+      "id": "d001",
+      "split": "development",
+      "tier": "answerable",
+      "cluster_id": "dev-fact-001",
+      "text": "What name does the Devs 2.0 paper give to its objective for prediction?",
+      "corpus_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+      "gold": {
+        "expected_behavior": "The paper calls its objective bounded foresight.",
+        "evidence": [
+          {
+            "doc_id": "devs",
+            "start_line": 18,
+            "end_line": 18,
+            "quote": "bounded foresight"
+          }
+        ],
+        "absence_audit": null,
+        "conflict_explanation": null
+      },
+      "review": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      }
+    },
+    {
+      "id": "d002",
+      "split": "development",
+      "tier": "answerable",
+      "cluster_id": "dev-fact-002",
+      "text": "Which provenance statuses does the Devs 2.0 paper say the agent should distinguish?",
+      "corpus_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+      "gold": {
+        "expected_behavior": "List all eight statuses as the paper's proposed vocabulary.",
+        "evidence": [
+          {
+            "doc_id": "devs",
+            "start_line": 206,
+            "end_line": 206,
+            "quote": "proposed, derived, simulated, observed, replicated, contradicted, superseded, and unknown"
+          }
+        ],
+        "absence_audit": null,
+        "conflict_explanation": null
+      },
+      "review": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      }
+    },
+    {
+      "id": "d003",
+      "split": "development",
+      "tier": "answerable",
+      "cluster_id": "dev-fact-003",
+      "text": "What roles does the Devs 2.0 paper separate when discussing human agency?",
+      "corpus_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+      "gold": {
+        "expected_behavior": "Distinguish these four roles.",
+        "evidence": [
+          {
+            "doc_id": "devs",
+            "start_line": 292,
+            "end_line": 292,
+            "quote": "prediction, recommendation, authorization, and action"
+          }
+        ],
+        "absence_audit": null,
+        "conflict_explanation": null
+      },
+      "review": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      }
+    },
+    {
+      "id": "d004",
+      "split": "development",
+      "tier": "answerable",
+      "cluster_id": "dev-fact-004",
+      "text": "How many held-out scenario–seed pairs were used in WORLD-GRID-005?",
+      "corpus_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+      "gold": {
+        "expected_behavior": "The report states 96; this is a report about a synthetic benchmark, not field validation.",
+        "evidence": [
+          {
+            "doc_id": "grid005",
+            "start_line": 9,
+            "end_line": 9,
+            "quote": "96 held-out scenario–seed pairs"
+          }
+        ],
+        "absence_audit": null,
+        "conflict_explanation": null
+      },
+      "review": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      }
+    },
+    {
+      "id": "d005",
+      "split": "development",
+      "tier": "answerable",
+      "cluster_id": "dev-fact-005",
+      "text": "What range does the F001 specification give for its coherence value?",
+      "corpus_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+      "gold": {
+        "expected_behavior": "The specification gives a positive value at most one under its stated assumptions.",
+        "evidence": [
+          {
+            "doc_id": "f001",
+            "start_line": 48,
+            "end_line": 48,
+            "quote": "0<C_k<=1"
+          }
+        ],
+        "absence_audit": null,
+        "conflict_explanation": null
+      },
+      "review": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      }
+    },
+    {
+      "id": "d006",
+      "split": "development",
+      "tier": "answerable",
+      "cluster_id": "dev-fact-006",
+      "text": "What does the R-001 paper say its rotational-amplitude ansatz does to rotation?",
+      "corpus_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+      "gold": {
+        "expected_behavior": "It propagates a supplied rotation amplitude and does not generate rotation from zero.",
+        "evidence": [
+          {
+            "doc_id": "r001",
+            "start_line": 69,
+            "end_line": 69,
+            "quote": "The ansatz inherits but does not create rotation."
+          }
+        ],
+        "absence_audit": null,
+        "conflict_explanation": null
+      },
+      "review": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      }
+    },
+    {
+      "id": "d007",
+      "split": "development",
+      "tier": "absent",
+      "cluster_id": "dev-fact-007",
+      "text": "What random seed is specified for evaluating the Devs 2.0 architecture?",
+      "corpus_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+      "gold": {
+        "expected_behavior": "State that the requested value/result is not established by the supplied corpus; do not invent it or equate absence with zero. Correct a false premise if a source supports the correction.",
+        "evidence": [],
+        "absence_audit": {
+          "queries": [
+            "DEV2",
+            "seed"
+          ],
+          "literal_search_hits": {
+            "devs": [],
+            "f001": [
+              57,
+              63
+            ],
+            "grid005": [
+              9,
+              58,
+              125,
+              129
+            ],
+            "r001": [
+              102,
+              127
+            ],
+            "me003": [],
+            "continuum": [],
+            "monitoring": [
+              9,
+              52,
+              56,
+              60,
+              74,
+              84,
+              86,
+              96,
+              104
+            ],
+            "weaver": [],
+            "r001-initial": [
+              102
+            ],
+            "me003-initial": []
+          },
+          "documents_reviewed": [
+            "devs",
+            "f001",
+            "grid005",
+            "r001",
+            "me003",
+            "continuum",
+            "monitoring",
+            "weaver",
+            "r001-initial",
+            "me003-initial"
+          ],
+          "manual_semantic_review": false,
+          "limitations": "Draft candidate only. Lexical searching does not establish semantic absence; independent reviewers must reject or revise ambiguous items."
+        },
+        "conflict_explanation": null
+      },
+      "review": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      }
+    },
+    {
+      "id": "d008",
+      "split": "development",
+      "tier": "absent",
+      "cluster_id": "dev-fact-008",
+      "text": "Which tokenizer version is specified for measuring Monolithic Agent benchmark costs?",
+      "corpus_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+      "gold": {
+        "expected_behavior": "State that the requested value/result is not established by the supplied corpus; do not invent it or equate absence with zero. Correct a false premise if a source supports the correction.",
+        "evidence": [],
+        "absence_audit": {
+          "queries": [
+            "tokenizer",
+            "cost"
+          ],
+          "literal_search_hits": {
+            "devs": [],
+            "f001": [
+              57
+            ],
+            "grid005": [],
+            "r001": [],
+            "me003": [],
+            "continuum": [],
+            "monitoring": [],
+            "weaver": [],
+            "r001-initial": [],
+            "me003-initial": []
+          },
+          "documents_reviewed": [
+            "devs",
+            "f001",
+            "grid005",
+            "r001",
+            "me003",
+            "continuum",
+            "monitoring",
+            "weaver",
+            "r001-initial",
+            "me003-initial"
+          ],
+          "manual_semantic_review": false,
+          "limitations": "Draft candidate only. Lexical searching does not establish semantic absence; independent reviewers must reject or revise ambiguous items."
+        },
+        "conflict_explanation": null
+      },
+      "review": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      }
+    },
+    {
+      "id": "d009",
+      "split": "development",
+      "tier": "absent",
+      "cluster_id": "dev-fact-009",
+      "text": "What response-latency target, in milliseconds, is specified for the Monolithic Agent?",
+      "corpus_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+      "gold": {
+        "expected_behavior": "State that the requested value/result is not established by the supplied corpus; do not invent it or equate absence with zero. Correct a false premise if a source supports the correction.",
+        "evidence": [],
+        "absence_audit": {
+          "queries": [
+            "latency",
+            "milliseconds"
+          ],
+          "literal_search_hits": {
+            "devs": [],
+            "f001": [
+              57
+            ],
+            "grid005": [],
+            "r001": [],
+            "me003": [],
+            "continuum": [],
+            "monitoring": [],
+            "weaver": [],
+            "r001-initial": [],
+            "me003-initial": []
+          },
+          "documents_reviewed": [
+            "devs",
+            "f001",
+            "grid005",
+            "r001",
+            "me003",
+            "continuum",
+            "monitoring",
+            "weaver",
+            "r001-initial",
+            "me003-initial"
+          ],
+          "manual_semantic_review": false,
+          "limitations": "Draft candidate only. Lexical searching does not establish semantic absence; independent reviewers must reject or revise ambiguous items."
+        },
+        "conflict_explanation": null
+      },
+      "review": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      }
+    },
+    {
+      "id": "d010",
+      "split": "development",
+      "tier": "absent",
+      "cluster_id": "dev-fact-010",
+      "text": "What sampling interval in seconds is assigned to the F001 discrete state updates?",
+      "corpus_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+      "gold": {
+        "expected_behavior": "State that the requested value/result is not established by the supplied corpus; do not invent it or equate absence with zero. Correct a false premise if a source supports the correction.",
+        "evidence": [],
+        "absence_audit": {
+          "queries": [
+            "sampling",
+            "interval",
+            "seconds"
+          ],
+          "literal_search_hits": {
+            "devs": [],
+            "f001": [
+              57
+            ],
+            "grid005": [
+              9,
+              15,
+              87,
+              125
+            ],
+            "r001": [],
+            "me003": [],
+            "continuum": [],
+            "monitoring": [
+              9,
+              68,
+              70,
+              74,
+              76,
+              78
+            ],
+            "weaver": [
+              15,
+              91,
+              147,
+              167,
+              219
+            ],
+            "r001-initial": [],
+            "me003-initial": []
+          },
+          "documents_reviewed": [
+            "devs",
+            "f001",
+            "grid005",
+            "r001",
+            "me003",
+            "continuum",
+            "monitoring",
+            "weaver",
+            "r001-initial",
+            "me003-initial"
+          ],
+          "manual_semantic_review": false,
+          "limitations": "Draft candidate only. Lexical searching does not establish semantic absence; independent reviewers must reject or revise ambiguous items."
+        },
+        "conflict_explanation": null
+      },
+      "review": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      }
+    },
+    {
+      "id": "d011",
+      "split": "development",
+      "tier": "absent",
+      "cluster_id": "dev-fact-011",
+      "text": "What numerical value is assigned to the F001 persistent-change alarm threshold?",
+      "corpus_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+      "gold": {
+        "expected_behavior": "State that the requested value/result is not established by the supplied corpus; do not invent it or equate absence with zero. Correct a false premise if a source supports the correction.",
+        "evidence": [],
+        "absence_audit": {
+          "queries": [
+            "q_*",
+            "threshold"
+          ],
+          "literal_search_hits": {
+            "devs": [],
+            "f001": [
+              33,
+              35
+            ],
+            "grid005": [],
+            "r001": [],
+            "me003": [],
+            "continuum": [],
+            "monitoring": [
+              9,
+              15,
+              17,
+              46,
+              52,
+              56,
+              60,
+              72,
+              78,
+              100
+            ],
+            "weaver": [
+              69,
+              177,
+              223
+            ],
+            "r001-initial": [],
+            "me003-initial": []
+          },
+          "documents_reviewed": [
+            "devs",
+            "f001",
+            "grid005",
+            "r001",
+            "me003",
+            "continuum",
+            "monitoring",
+            "weaver",
+            "r001-initial",
+            "me003-initial"
+          ],
+          "manual_semantic_review": false,
+          "limitations": "Draft candidate only. Lexical searching does not establish semantic absence; independent reviewers must reject or revise ambiguous items."
+        },
+        "conflict_explanation": null
+      },
+      "review": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      }
+    },
+    {
+      "id": "d012",
+      "split": "development",
+      "tier": "absent",
+      "cluster_id": "dev-fact-012",
+      "text": "What energy storage capacity, in megawatt-hours, was assigned to each WORLD-GRID-005 storage site?",
+      "corpus_commit": "c4e9d7cf4a2dbf6646aaf45f39d75593fa674331",
+      "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+      "gold": {
+        "expected_behavior": "State that the requested value/result is not established by the supplied corpus; do not invent it or equate absence with zero. Correct a false premise if a source supports the correction.",
+        "evidence": [],
+        "absence_audit": {
+          "queries": [
+            "megawatt",
+            "MWh",
+            "capacity"
+          ],
+          "literal_search_hits": {
+            "devs": [],
+            "f001": [],
+            "grid005": [
+              9
+            ],
+            "r001": [],
+            "me003": [],
+            "continuum": [],
+            "monitoring": [],
+            "weaver": [],
+            "r001-initial": [],
+            "me003-initial": []
+          },
+          "documents_reviewed": [
+            "devs",
+            "f001",
+            "grid005",
+            "r001",
+            "me003",
+            "continuum",
+            "monitoring",
+            "weaver",
+            "r001-initial",
+            "me003-initial"
+          ],
+          "manual_semantic_review": false,
+          "limitations": "Draft candidate only. Lexical searching does not establish semantic absence; independent reviewers must reject or revise ambiguous items."
+        },
+        "conflict_explanation": null
+      },
+      "review": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      }
+    }
+  ]
+}

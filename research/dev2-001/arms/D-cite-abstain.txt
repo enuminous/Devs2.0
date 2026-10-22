@@ -1,0 +1,1 @@
+Use a conventional evidence-grounded question-answering policy: answer only when the excerpts support the answer; cite the supporting passages and abstain explicitly when they do not. Report inconsistent sources with their versions, without arbitrarily choosing a winner. No EFMW terminology or provenance-status ladder is needed. Return the common final JSON format.

@@ -1,0 +1,101 @@
+{
+  "experiment": "DEV2-001",
+  "status": "DRAFT_NOT_FROZEN",
+  "model": {
+    "snapshot": null,
+    "tokenizer": null,
+    "temperature": 0,
+    "top_p": 1,
+    "reasoning_setting": null,
+    "seed_supported": null
+  },
+  "adapter": {
+    "sha256": null,
+    "environment_lock": null
+  },
+  "operator": null,
+  "scoring_custodian": null,
+  "order_seed": 20261022,
+  "generation_seed": 73519,
+  "retrieval": {
+    "method": "lexical_bm25_v1",
+    "top_k": 6,
+    "chunk_lines": 14,
+    "overlap_lines": 3,
+    "coverage_review": null
+  },
+  "budget": {
+    "total_tokens": 8192,
+    "generated_tokens": 1024,
+    "accounting": "All input and output across all stages, including cached input and reasoning tokens; common ceilings; no retries."
+  },
+  "cost": {
+    "currency": "USD",
+    "input_per_million": null,
+    "output_per_million": null,
+    "cached_input_per_million": null,
+    "source": null,
+    "as_of": null
+  },
+  "holdout": {
+    "custodian_attestation": null,
+    "sealed_before_run": false
+  },
+  "arms": {
+    "A": [
+      {
+        "name": "answer",
+        "prompt": "A-plain.txt",
+        "output_cap": 1024
+      }
+    ],
+    "B": [
+      {
+        "name": "answer",
+        "prompt": "B-status.txt",
+        "output_cap": 1024
+      }
+    ],
+    "C": [
+      {
+        "name": "draft",
+        "prompt": "B-status.txt",
+        "output_cap": 256
+      },
+      {
+        "name": "critic",
+        "prompt": "C-critic.txt",
+        "output_cap": 256
+      },
+      {
+        "name": "revision",
+        "prompt": "C-revise.txt",
+        "output_cap": 512
+      }
+    ],
+    "D": [
+      {
+        "name": "answer",
+        "prompt": "D-cite-abstain.txt",
+        "output_cap": 1024
+      }
+    ],
+    "E": [
+      {
+        "name": "draft",
+        "prompt": "A-plain.txt",
+        "output_cap": 256
+      },
+      {
+        "name": "critic",
+        "prompt": "E-feedback.txt",
+        "output_cap": 256
+      },
+      {
+        "name": "revision",
+        "prompt": "E-revise.txt",
+        "output_cap": 512
+      }
+    ]
+  }
+}

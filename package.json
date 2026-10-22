@@ -1,0 +1,1 @@
+{"name":"devs2-research-desktop","version":"0.1.0","private":true,"type":"module","scripts":{"test":"node --test tests/engine.test.mjs","build":"python3 scripts/build_site.py"}}

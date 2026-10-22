@@ -1,0 +1,407 @@
+[
+  {
+    "module": "Possibility",
+    "name": "update_sound",
+    "qualified": "Devs.Possibility.update_sound",
+    "file": "Devs/Possibility.lean",
+    "line": 12,
+    "description": "Ordinary predicate intersection or explicit expansion; constraints are supplied, not inferred.",
+    "code": "theorem update_sound (s e : Space \u03b1) : included (update s e) s :=\n  fun _ h => h.1"
+  },
+  {
+    "module": "Possibility",
+    "name": "update_satisfies_evidence",
+    "qualified": "Devs.Possibility.update_satisfies_evidence",
+    "file": "Devs/Possibility.lean",
+    "line": 15,
+    "description": "Ordinary predicate intersection or explicit expansion; constraints are supplied, not inferred.",
+    "code": "theorem update_satisfies_evidence (s e : Space \u03b1) : included (update s e) e :=\n  fun _ h => h.2"
+  },
+  {
+    "module": "Possibility",
+    "name": "update_idempotent",
+    "qualified": "Devs.Possibility.update_idempotent",
+    "file": "Devs/Possibility.lean",
+    "line": 18,
+    "description": "Ordinary predicate intersection or explicit expansion; constraints are supplied, not inferred.",
+    "code": "theorem update_idempotent (s e : Space \u03b1) (x : \u03b1) :\n    update (update s e) e x \u2194 update s e x := by\n  simp [update]"
+  },
+  {
+    "module": "Possibility",
+    "name": "independent_constraints_commute",
+    "qualified": "Devs.Possibility.independent_constraints_commute",
+    "file": "Devs/Possibility.lean",
+    "line": 22,
+    "description": "Ordinary predicate intersection or explicit expansion; constraints are supplied, not inferred.",
+    "code": "theorem independent_constraints_commute (s e f : Space \u03b1) (x : \u03b1) :\n    update (update s e) f x \u2194 update (update s f) e x := by\n  simp [update, and_comm, and_left_comm]"
+  },
+  {
+    "module": "Possibility",
+    "name": "incompatible_evidence_empties",
+    "qualified": "Devs.Possibility.incompatible_evidence_empties",
+    "file": "Devs/Possibility.lean",
+    "line": 26,
+    "description": "Ordinary predicate intersection or explicit expansion; constraints are supplied, not inferred.",
+    "code": "theorem incompatible_evidence_empties (s e : Space \u03b1)\n    (h : \u2200 x, s x \u2192 \u00ace x) : \u00ac\u2203 x, update s e x := by\n  rintro \u27e8x, hs, he\u27e9\n  exact h x hs he"
+  },
+  {
+    "module": "Possibility",
+    "name": "expansion_keeps_old",
+    "qualified": "Devs.Possibility.expansion_keeps_old",
+    "file": "Devs/Possibility.lean",
+    "line": 31,
+    "description": "Ordinary predicate intersection or explicit expansion; constraints are supplied, not inferred.",
+    "code": "theorem expansion_keeps_old (s alternatives : Space \u03b1) :\n    included s (expand s alternatives) := fun _ h => Or.inl h"
+  },
+  {
+    "module": "Possibility",
+    "name": "expansion_admits_new",
+    "qualified": "Devs.Possibility.expansion_admits_new",
+    "file": "Devs/Possibility.lean",
+    "line": 34,
+    "description": "Ordinary predicate intersection or explicit expansion; constraints are supplied, not inferred.",
+    "code": "theorem expansion_admits_new (s alternatives : Space \u03b1) (x : \u03b1)\n    (h : alternatives x) : expand s alternatives x := Or.inr h"
+  },
+  {
+    "module": "Possibility",
+    "name": "evidence_then_expansion_can_reopen",
+    "qualified": "Devs.Possibility.evidence_then_expansion_can_reopen",
+    "file": "Devs/Possibility.lean",
+    "line": 37,
+    "description": "Ordinary predicate intersection or explicit expansion; constraints are supplied, not inferred.",
+    "code": "theorem evidence_then_expansion_can_reopen :\n    expand (update (fun _ : Bool => True) (fun x => x = false))\n      (fun x => x = true) true := by\n  exact Or.inr rfl"
+  },
+  {
+    "module": "Provenance",
+    "name": "observed_requires_reference",
+    "qualified": "Devs.Provenance.observed_requires_reference",
+    "file": "Devs/Provenance.lean",
+    "line": 29,
+    "description": "Typed status or dependency-rank invariant. Correct source interpretation and rank assignment are assumptions.",
+    "code": "theorem observed_requires_reference (c : Claim) (h : observedEvidence c) :\n    c.references \u2260 [] := by\n  rcases h.2 with \u27e8r, hr, _\u27e9\n  intro hempty\n  simp [hempty] at hr"
+  },
+  {
+    "module": "Provenance",
+    "name": "proposed_is_not_observed",
+    "qualified": "Devs.Provenance.proposed_is_not_observed",
+    "file": "Devs/Provenance.lean",
+    "line": 35,
+    "description": "Typed status or dependency-rank invariant. Correct source interpretation and rank assignment are assumptions.",
+    "code": "theorem proposed_is_not_observed (c : Claim) (h : c.status = .proposed) :\n    \u00acobservedEvidence c := by simp [observedEvidence, h]"
+  },
+  {
+    "module": "Provenance",
+    "name": "simulation_is_not_observation",
+    "qualified": "Devs.Provenance.simulation_is_not_observation",
+    "file": "Devs/Provenance.lean",
+    "line": 38,
+    "description": "Typed status or dependency-rank invariant. Correct source interpretation and rank assignment are assumptions.",
+    "code": "theorem simulation_is_not_observation (c : Claim) (h : c.status = .simulated) :\n    \u00acobservedEvidence c := by simp [observedEvidence, h]"
+  },
+  {
+    "module": "Provenance",
+    "name": "derivation_is_not_observation",
+    "qualified": "Devs.Provenance.derivation_is_not_observation",
+    "file": "Devs/Provenance.lean",
+    "line": 41,
+    "description": "Typed status or dependency-rank invariant. Correct source interpretation and rank assignment are assumptions.",
+    "code": "theorem derivation_is_not_observation (c : Claim) (h : c.status = .derived) :\n    \u00acobservedEvidence c := by simp [observedEvidence, h]"
+  },
+  {
+    "module": "Provenance",
+    "name": "ranked_no_self_dependency",
+    "qualified": "Devs.Provenance.ranked_no_self_dependency",
+    "file": "Devs/Provenance.lean",
+    "line": 49,
+    "description": "Typed status or dependency-rank invariant. Correct source interpretation and rank assignment are assumptions.",
+    "code": "theorem ranked_no_self_dependency (edge : \u03b1 \u2192 \u03b1 \u2192 Prop) (rank : \u03b1 \u2192 Nat)\n    (h : Ranked edge rank) (x : \u03b1) : \u00acedge x x := by\n  intro hx\n  have := h x x hx\n  omega"
+  },
+  {
+    "module": "Provenance",
+    "name": "ranked_no_two_cycle",
+    "qualified": "Devs.Provenance.ranked_no_two_cycle",
+    "file": "Devs/Provenance.lean",
+    "line": 55,
+    "description": "Typed status or dependency-rank invariant. Correct source interpretation and rank assignment are assumptions.",
+    "code": "theorem ranked_no_two_cycle (edge : \u03b1 \u2192 \u03b1 \u2192 Prop) (rank : \u03b1 \u2192 Nat)\n    (h : Ranked edge rank) (a b : \u03b1) : \u00ac(edge a b \u2227 edge b a) := by\n  rintro \u27e8hab, hba\u27e9\n  have := h a b hab\n  have := h b a hba\n  omega\n\ninductive Path (edge : \u03b1 \u2192 \u03b1 \u2192 Prop) : \u03b1 \u2192 \u03b1 \u2192 Prop where\n  | single : edge a b \u2192 Path edge a b\n  | next : Path edge a b \u2192 edge b c \u2192 Path edge a c"
+  },
+  {
+    "module": "Provenance",
+    "name": "path_increases_rank",
+    "qualified": "Devs.Provenance.path_increases_rank",
+    "file": "Devs/Provenance.lean",
+    "line": 66,
+    "description": "Typed status or dependency-rank invariant. Correct source interpretation and rank assignment are assumptions.",
+    "code": "theorem path_increases_rank (edge : \u03b1 \u2192 \u03b1 \u2192 Prop) (rank : \u03b1 \u2192 Nat)\n    (h : Ranked edge rank) (p : Path edge a b) : rank a < rank b := by\n  induction p with\n  | single he => exact h _ _ he\n  | next _ he ih => exact Nat.lt_trans ih (h _ _ he)"
+  },
+  {
+    "module": "Provenance",
+    "name": "ranked_no_cycle",
+    "qualified": "Devs.Provenance.ranked_no_cycle",
+    "file": "Devs/Provenance.lean",
+    "line": 72,
+    "description": "Typed status or dependency-rank invariant. Correct source interpretation and rank assignment are assumptions.",
+    "code": "theorem ranked_no_cycle (edge : \u03b1 \u2192 \u03b1 \u2192 Prop) (rank : \u03b1 \u2192 Nat)\n    (h : Ranked edge rank) (x : \u03b1) : \u00acPath edge x x := by\n  intro p\n  have := path_increases_rank edge rank h p\n  omega"
+  },
+  {
+    "module": "Uncertainty",
+    "name": "zero_prior_stays_zero",
+    "qualified": "Devs.Uncertainty.zero_prior_stays_zero",
+    "file": "Devs/Uncertainty.lean",
+    "line": 11,
+    "description": "Natural-number weight update. Positive mass and correctly specified likelihoods are separate obligations.",
+    "code": "theorem zero_prior_stays_zero (w l : \u03b1 \u2192 Nat) (x : \u03b1) (h : w x = 0) :\n    revise w l x = 0 := by simp [revise, h]"
+  },
+  {
+    "module": "Uncertainty",
+    "name": "impossible_likelihood_eliminates",
+    "qualified": "Devs.Uncertainty.impossible_likelihood_eliminates",
+    "file": "Devs/Uncertainty.lean",
+    "line": 14,
+    "description": "Natural-number weight update. Positive mass and correctly specified likelihoods are separate obligations.",
+    "code": "theorem impossible_likelihood_eliminates (w l : \u03b1 \u2192 Nat) (x : \u03b1)\n    (h : l x = 0) : revise w l x = 0 := by simp [revise, h]"
+  },
+  {
+    "module": "Uncertainty",
+    "name": "positive_update_requires_prior",
+    "qualified": "Devs.Uncertainty.positive_update_requires_prior",
+    "file": "Devs/Uncertainty.lean",
+    "line": 17,
+    "description": "Natural-number weight update. Positive mass and correctly specified likelihoods are separate obligations.",
+    "code": "theorem positive_update_requires_prior (w l : \u03b1 \u2192 Nat) (x : \u03b1)\n    (h : support (revise w l) x) : support w x := by\n  cases hw : w x with\n  | zero => simp [support, revise, hw] at h\n  | succ n => simp [support, hw]"
+  },
+  {
+    "module": "Uncertainty",
+    "name": "positive_inputs_stay_possible",
+    "qualified": "Devs.Uncertainty.positive_inputs_stay_possible",
+    "file": "Devs/Uncertainty.lean",
+    "line": 23,
+    "description": "Natural-number weight update. Positive mass and correctly specified likelihoods are separate obligations.",
+    "code": "theorem positive_inputs_stay_possible (w l : \u03b1 \u2192 Nat) (x : \u03b1)\n    (hw : support w x) (hl : support l x) : support (revise w l) x :=\n  Nat.mul_pos hw hl"
+  },
+  {
+    "module": "Uncertainty",
+    "name": "neutral_evidence",
+    "qualified": "Devs.Uncertainty.neutral_evidence",
+    "file": "Devs/Uncertainty.lean",
+    "line": 27,
+    "description": "Natural-number weight update. Positive mass and correctly specified likelihoods are separate obligations.",
+    "code": "theorem neutral_evidence (w : \u03b1 \u2192 Nat) (x : \u03b1) :\n    revise w (fun _ => 1) x = w x := by simp [revise]"
+  },
+  {
+    "module": "Uncertainty",
+    "name": "sequential_likelihoods",
+    "qualified": "Devs.Uncertainty.sequential_likelihoods",
+    "file": "Devs/Uncertainty.lean",
+    "line": 30,
+    "description": "Natural-number weight update. Positive mass and correctly specified likelihoods are separate obligations.",
+    "code": "theorem sequential_likelihoods (w l m : \u03b1 \u2192 Nat) (x : \u03b1) :\n    revise (revise w l) m x = revise w (fun y => l y * m y) x := by\n  simp [revise, Nat.mul_assoc]"
+  },
+  {
+    "module": "Uncertainty",
+    "name": "evidence_order_commutes",
+    "qualified": "Devs.Uncertainty.evidence_order_commutes",
+    "file": "Devs/Uncertainty.lean",
+    "line": 34,
+    "description": "Natural-number weight update. Positive mass and correctly specified likelihoods are separate obligations.",
+    "code": "theorem evidence_order_commutes (w l m : \u03b1 \u2192 Nat) (x : \u03b1) :\n    revise (revise w l) m x = revise (revise w m) l x := by\n  simp [revise, Nat.mul_comm, Nat.mul_left_comm]"
+  },
+  {
+    "module": "Criticism",
+    "name": "no_invented_claims",
+    "qualified": "Devs.Criticism.no_invented_claims",
+    "file": "Devs/Criticism.lean",
+    "line": 9,
+    "description": "Filtering invariant or counterexample. Critic soundness is not established by this theorem.",
+    "code": "theorem no_invented_claims (claims : List \u03b1) (accept : \u03b1 \u2192 Bool) (x : \u03b1)\n    (h : x \u2208 survivors claims accept) : x \u2208 claims := by\n  exact (List.mem_filter.mp h).1"
+  },
+  {
+    "module": "Criticism",
+    "name": "survivors_satisfy_critic",
+    "qualified": "Devs.Criticism.survivors_satisfy_critic",
+    "file": "Devs/Criticism.lean",
+    "line": 13,
+    "description": "Filtering invariant or counterexample. Critic soundness is not established by this theorem.",
+    "code": "theorem survivors_satisfy_critic (claims : List \u03b1) (accept : \u03b1 \u2192 Bool) (x : \u03b1)\n    (h : x \u2208 survivors claims accept) : accept x = true := by\n  exact (List.mem_filter.mp h).2"
+  },
+  {
+    "module": "Criticism",
+    "name": "critic_idempotent",
+    "qualified": "Devs.Criticism.critic_idempotent",
+    "file": "Devs/Criticism.lean",
+    "line": 17,
+    "description": "Filtering invariant or counterexample. Critic soundness is not established by this theorem.",
+    "code": "theorem critic_idempotent (claims : List \u03b1) (accept : \u03b1 \u2192 Bool) :\n    survivors (survivors claims accept) accept = survivors claims accept := by\n  simp [survivors, List.filter_filter]"
+  },
+  {
+    "module": "Criticism",
+    "name": "retained_truth_conditional",
+    "qualified": "Devs.Criticism.retained_truth_conditional",
+    "file": "Devs/Criticism.lean",
+    "line": 21,
+    "description": "Filtering invariant or counterexample. Critic soundness is not established by this theorem.",
+    "code": "theorem retained_truth_conditional (claims : List \u03b1) (accept : \u03b1 \u2192 Bool)\n    (trueClaim : \u03b1 \u2192 Prop) (sound : \u2200 x, accept x = true \u2192 trueClaim x)\n    (x : \u03b1) (h : x \u2208 survivors claims accept) : trueClaim x :=\n  sound x (survivors_satisfy_critic claims accept x h)"
+  },
+  {
+    "module": "Criticism",
+    "name": "bad_critic_can_keep_only_false",
+    "qualified": "Devs.Criticism.bad_critic_can_keep_only_false",
+    "file": "Devs/Criticism.lean",
+    "line": 28,
+    "description": "Filtering invariant or counterexample. Critic soundness is not established by this theorem.",
+    "code": "theorem bad_critic_can_keep_only_false :\n    survivors [true, false] (fun x => !x) = [false] := by decide"
+  },
+  {
+    "module": "Criticism",
+    "name": "agreement_can_preserve_error",
+    "qualified": "Devs.Criticism.agreement_can_preserve_error",
+    "file": "Devs/Criticism.lean",
+    "line": 31,
+    "description": "Filtering invariant or counterexample. Critic soundness is not established by this theorem.",
+    "code": "theorem agreement_can_preserve_error :\n    survivors [false] (fun _ => true) = [false] := by decide"
+  },
+  {
+    "module": "Agency",
+    "name": "execution_has_permission",
+    "qualified": "Devs.Agency.execution_has_permission",
+    "file": "Devs/Agency.lean",
+    "line": 18,
+    "description": "Authorization bound to an exact action and revision. Real-world identity and UI enforcement remain outside the proof.",
+    "code": "theorem execution_has_permission (permit : Proposal \u2192 Prop) (a : Authorized permit) :\n    permit (execute permit a) := a.evidence"
+  },
+  {
+    "module": "Agency",
+    "name": "no_authorized_value_without_permission",
+    "qualified": "Devs.Agency.no_authorized_value_without_permission",
+    "file": "Devs/Agency.lean",
+    "line": 21,
+    "description": "Authorization bound to an exact action and revision. Real-world identity and UI enforcement remain outside the proof.",
+    "code": "theorem no_authorized_value_without_permission (permit : Proposal \u2192 Prop)\n    (h : \u2200 p, \u00acpermit p) : \u00acNonempty (Authorized permit) := by\n  rintro \u27e8a\u27e9\n  exact h a.proposal a.evidence"
+  },
+  {
+    "module": "Agency",
+    "name": "approval_for_one_revision_does_not_cover_another",
+    "qualified": "Devs.Agency.approval_for_one_revision_does_not_cover_another",
+    "file": "Devs/Agency.lean",
+    "line": 26,
+    "description": "Authorization bound to an exact action and revision. Real-world identity and UI enforcement remain outside the proof.",
+    "code": "theorem approval_for_one_revision_does_not_cover_another\n    (id oldRevision newRevision : Nat) (h : oldRevision \u2260 newRevision) :\n    (Proposal.mk id newRevision) \u2260 (Proposal.mk id oldRevision) := by\n  intro eq\n  have : newRevision = oldRevision := congrArg Proposal.revision eq\n  exact h this.symm"
+  },
+  {
+    "module": "Budget",
+    "name": "cached_input_still_counted",
+    "qualified": "Devs.Budget.cached_input_still_counted",
+    "file": "Devs/Budget.lean",
+    "line": 14,
+    "description": "Natural-number accounting invariant. Accurate provider usage is an external obligation.",
+    "code": "theorem cached_input_still_counted (u : Usage) : u.cached \u2264 total u := by\n  have := u.cachedWithinInput\n  unfold total\n  omega"
+  },
+  {
+    "module": "Budget",
+    "name": "append_never_reduces",
+    "qualified": "Devs.Budget.append_never_reduces",
+    "file": "Devs/Budget.lean",
+    "line": 19,
+    "description": "Natural-number accounting invariant. Accurate provider usage is an external obligation.",
+    "code": "theorem append_never_reduces (spent : Nat) (u : Usage) :\n    spent \u2264 appendTotal spent u := by unfold appendTotal total; omega"
+  },
+  {
+    "module": "Budget",
+    "name": "bounded_step",
+    "qualified": "Devs.Budget.bounded_step",
+    "file": "Devs/Budget.lean",
+    "line": 22,
+    "description": "Natural-number accounting invariant. Accurate provider usage is an external obligation.",
+    "code": "theorem bounded_step (spent cap : Nat) (u : Usage)\n    (h : total u \u2264 cap - spent) (hs : spent \u2264 cap) :\n    appendTotal spent u \u2264 cap := by unfold appendTotal; omega"
+  },
+  {
+    "module": "Budget",
+    "name": "stage_allocations_equal",
+    "qualified": "Devs.Budget.stage_allocations_equal",
+    "file": "Devs/Budget.lean",
+    "line": 26,
+    "description": "Natural-number accounting invariant. Accurate provider usage is an external obligation.",
+    "code": "theorem stage_allocations_equal : 256 + 256 + 512 = (1024 : Nat) := by decide"
+  },
+  {
+    "module": "Budget",
+    "name": "cache_discount_does_not_reduce_token_total",
+    "qualified": "Devs.Budget.cache_discount_does_not_reduce_token_total",
+    "file": "Devs/Budget.lean",
+    "line": 28,
+    "description": "Natural-number accounting invariant. Accurate provider usage is an external obligation.",
+    "code": "theorem cache_discount_does_not_reduce_token_total (input output c\u2081 c\u2082 : Nat)\n    (h\u2081 : c\u2081 \u2264 input) (h\u2082 : c\u2082 \u2264 input) :\n    total \u27e8input, output, c\u2081, h\u2081\u27e9 = total \u27e8input, output, c\u2082, h\u2082\u27e9 := rfl"
+  },
+  {
+    "module": "Benchmark",
+    "name": "pass_and_kill_disjoint",
+    "qualified": "Devs.Benchmark.pass_and_kill_disjoint",
+    "file": "Devs/Benchmark.lean",
+    "line": 26,
+    "description": "Arithmetic or logical property of explicitly stated gates. No statistical coverage or empirical superiority theorem.",
+    "code": "theorem pass_and_kill_disjoint (d : Decision) (inside : d.effect \u2264 d.upper) :\n    \u00ac(passes d \u2227 killed d) := by\n  rintro \u27e8hp, hk\u27e9\n  have := hp.1\n  unfold killed at hk\n  omega"
+  },
+  {
+    "module": "Benchmark",
+    "name": "draft_never_supported",
+    "qualified": "Devs.Benchmark.draft_never_supported",
+    "file": "Devs/Benchmark.lean",
+    "line": 33,
+    "description": "Arithmetic or logical property of explicitly stated gates. No statistical coverage or empirical superiority theorem.",
+    "code": "theorem draft_never_supported (d : Decision) (h : d.frozen = false) :\n    \u00acsupported d := by simp [supported, h]"
+  },
+  {
+    "module": "Benchmark",
+    "name": "replication_required",
+    "qualified": "Devs.Benchmark.replication_required",
+    "file": "Devs/Benchmark.lean",
+    "line": 36,
+    "description": "Arithmetic or logical property of explicitly stated gates. No statistical coverage or empirical superiority theorem.",
+    "code": "theorem replication_required (d : Decision) (h : supported d) :\n    d.independentReplication = true := h.2.2"
+  },
+  {
+    "module": "Benchmark",
+    "name": "headroom_required",
+    "qualified": "Devs.Benchmark.headroom_required",
+    "file": "Devs/Benchmark.lean",
+    "line": 39,
+    "description": "Arithmetic or logical property of explicitly stated gates. No statistical coverage or empirical superiority theorem.",
+    "code": "theorem headroom_required (a c : Int) (nonnegative : 0 \u2264 c)\n    (gain : 2000 \u2264 a - c) : 2000 \u2264 a := by omega"
+  },
+  {
+    "module": "Benchmark",
+    "name": "paired_difference",
+    "qualified": "Devs.Benchmark.paired_difference",
+    "file": "Devs/Benchmark.lean",
+    "line": 42,
+    "description": "Arithmetic or logical property of explicitly stated gates. No statistical coverage or empirical superiority theorem.",
+    "code": "theorem paired_difference (bothFalse improves worsens : Int) :\n    (bothFalse + improves) - (bothFalse + worsens) = improves - worsens := by omega"
+  },
+  {
+    "module": "Benchmark",
+    "name": "approved_sample_total",
+    "qualified": "Devs.Benchmark.approved_sample_total",
+    "file": "Devs/Benchmark.lean",
+    "line": 45,
+    "description": "Arithmetic or logical property of explicitly stated gates. No statistical coverage or empirical superiority theorem.",
+    "code": "theorem approved_sample_total : 120 + 240 + 120 = (480 : Nat) := by decide"
+  },
+  {
+    "module": "Benchmark",
+    "name": "approved_margin_example",
+    "qualified": "Devs.Benchmark.approved_margin_example",
+    "file": "Devs/Benchmark.lean",
+    "line": 47,
+    "description": "Arithmetic or logical property of explicitly stated gates. No statistical coverage or empirical superiority theorem.",
+    "code": "theorem approved_margin_example : 10000 * (48 : Nat) = 2000 * 240 := by decide"
+  },
+  {
+    "module": "Benchmark",
+    "name": "no_decision_example",
+    "qualified": "Devs.Benchmark.no_decision_example",
+    "file": "Devs/Benchmark.lean",
+    "line": 50,
+    "description": "Arithmetic or logical property of explicitly stated gates. No statistical coverage or empirical superiority theorem.",
+    "code": "theorem no_decision_example :\n    \u00ac(2000 \u2264 (1500 : Int)) \u2227 \u00ac((2300 : Int) \u2264 1000) := by decide"
+  }
+]

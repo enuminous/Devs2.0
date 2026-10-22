@@ -1,0 +1,10 @@
+name = "devs2"
+version = "0.1.0"
+defaultTargets = ["Devs", "devs-check"]
+
+[[lean_lib]]
+name = "Devs"
+
+[[lean_exe]]
+name = "devs-check"
+root = "Main"
