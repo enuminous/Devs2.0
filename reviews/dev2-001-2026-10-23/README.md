@@ -53,3 +53,8 @@ The last command must still refuse this draft. The packet is AI-assisted prepara
 all independent reviewer decisions, curator attestations, raters and signatures remain
 unfilled. A later reviewer can assess a produced result only after generation, scoring,
 analysis and independent reproduction evidence exists.
+
+The packet verifier is an explicit check against this historical baseline. Later
+benchmark edits should report baseline drift; prepare a new review snapshot when
+needed. This historical draft check is not installed as a permanent gate that
+would prevent a legitimately completed future freeze.
