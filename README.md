@@ -4,7 +4,7 @@
 
 A self-contained browser workspace for Matthew Chenoweth Wright's **Devs 2.0: EFMW**: a versioned corpus assistant, explicit uncertainty, inspectable criticism, human agency, and a reproducible architecture benchmark. The original research remains in [enuminous/papers](https://github.com/enuminous/papers/blob/f1c8f5d15e873174bad25a018adadd71557cb659/Devs2.0-EFMW.md).
 
-**DEV2-001 is DRAFT, NOT FROZEN. No confirmatory model experiment has run.** Matthew approved the **120 answerable / 240 absent / 120 contradictory** evaluation target and **20 percentage point** minimum absolute improvement. Approval of those two parameters does not approve the remaining design or create evidence of success. The reviewed holdout is not yet populated.
+**DEV2-001 is DRAFT, NOT FROZEN. No confirmatory model experiment has run.** Matthew approved the **120 answerable / 240 absent / 120 contradictory** evaluation target and **20 percentage point** minimum absolute improvement. The follow-up fixes retain a 1,024-token Arm A output cap and common 8,192-token total cap, explicitly pin full prior outputs for both critic arms, and select a 12-point replication tolerance. Both independent runs must still satisfy the original pass gates. The reviewed holdout is not yet populated, and model/scoring pins are missing: [`dev2-001-v0.2-draft`](https://github.com/enuminous/Devs2.0/tree/dev2-001-v0.2-draft) is a tested checkpoint, not a frozen experiment. See the [decision record](research/dev2-001/APPROVALS.md).
 
 ![Devs 2.0 research desktop](docs/screenshots/desktop.jpg)
 

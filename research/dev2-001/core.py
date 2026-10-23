@@ -10,6 +10,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parents[1]
 TIERS = ("answerable", "absent", "contradictory")
+STAGE_CONTEXT_POLICY = "full_prior_outputs_v1"
+TOKEN_RATIO_DENOMINATOR = "observed_A_total_tokens_same_complete_roster"
 STATUSES = ("proposed", "derived", "simulated", "observed", "replicated",
             "contradicted", "superseded", "unknown")
 
@@ -170,11 +172,21 @@ def freeze_errors(config, thresholds, questions, docs):
         errors.append("kill/pass margins must be ordered within [0,1]")
     if thresholds["bootstrap_draws"] < 1000 or thresholds["max_token_ratio"] <= 0:
         errors.append("invalid analysis or cost gate")
+    tolerance = thresholds.get("replication_effect_tolerance")
+    if type(tolerance) not in (int, float) or not math.isfinite(tolerance) or not 0 <= tolerance <= 1:
+        errors.append("replication tolerance must be a finite absolute difference in [0,1]")
     for key in ("min_answerable_success", "max_answerable_drop", "min_conflict_report"):
         if not 0 <= thresholds[key] <= 1:
             errors.append("invalid utility threshold: " + key)
     if set(config["arms"]) != set("ABCDE"):
         errors.append("all three original arms and both conventional baselines are required")
+    if config.get("stage_context_policy") != STAGE_CONTEXT_POLICY:
+        errors.append("stage context policy must be explicitly pinned to full_prior_outputs_v1")
+    if config["budget"].get("token_ratio_denominator") != TOKEN_RATIO_DENOMINATOR:
+        errors.append("token ratio denominator must be A's observed total tokens on the same complete roster")
+    expected_a = [{"name": "answer", "prompt": "A-plain.txt", "output_cap": config["budget"]["generated_tokens"]}]
+    if config["arms"].get("A") != expected_a:
+        errors.append("Arm A must be one ordinary answer call with the entire common generation pool")
     if config["budget"]["generated_tokens"] <= 0 or config["budget"]["total_tokens"] <= config["budget"]["generated_tokens"]:
         errors.append("invalid common token budget")
     for arm, stages in config["arms"].items():

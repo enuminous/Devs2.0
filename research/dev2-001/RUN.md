@@ -16,6 +16,9 @@ Never present this template or synthetic test outputs as a completed experiment.
 - Question and independent family counts per tier: NOT CURATED
 - Retrieval evidence coverage, including both conflicting versions: NOT AUDITED
 - Price schedule, currency, pricing source/date: NOT SET
+- Selected resource policy: A one call / 1,024 output tokens; every arm 8,192 total tokens; `full_prior_outputs_v1` in C/E; verify exact frozen config
+- Efficiency denominator: observed A input+output on the same complete roster; no cap-based denominator
+- Replication tolerance: 0.12 absolute (12 points); both runs must satisfy all original gates
 
 ## Completion and scoring
 

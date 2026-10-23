@@ -31,6 +31,12 @@ The tests include fabricated data with known outcomes. Those fixtures test
 software, pairing and refusal paths only. They are not DEV2-001 observations.
 The CI workflow executes only these local checks; it does not call any model.
 
+The `dev2-001-v0.2-draft` tag identifies the resource-policy and replication
+checkpoint. It is explicitly **not** a frozen experiment. Run
+`python3 bench.py doctor --require-frozen` to inspect the actual freeze blockers.
+The tag job runs only after software/Lean verification for the explicitly marked
+checkpoint commit; it will refuse to overwrite an existing tag.
+
 ## 2. Provider adapter contract
 
 Create and audit a provider-specific adapter, commit its source and exact
@@ -44,6 +50,14 @@ or validates a real model. Do not substitute a changing model alias for a snapsh
 The runner launches `python adapter.py`, writes one JSON request on stdin and
 expects exactly one JSON object on stdout. Put diagnostics on private stderr;
 never print API keys. Required operations:
+
+`CONFIG.json.stage_context_policy` must be `full_prior_outputs_v1`. Both critic
+arms send the unchanged question and evidence at every stage, plus a fresh
+snapshot of all prior output texts. No previous system prompts are replayed,
+and no compressed state or new retrieval is substituted. Count the exact
+serialized call, including repeated inputs. Arm A has one 1,024-output-token
+call; all arms have an 8,192-total-token ceiling. The efficiency denominator is
+A's observed total spend on the same complete question roster.
 
 ```json
 {
@@ -179,8 +193,9 @@ environment belong in the report. The corpus stays pinned even if `main` moves.
 An independent operator must rebuild from the package alone, re-run generation
 and obtain fresh independent human ratings. Replaying the original responses
 checks analysis reproducibility only. Reproduce the deterministic analysis
-within 1e-12; the proposed generation replication requires primary effects within
-5 points, the same direction and all original gates in **both** runs. Document
+within 1e-12; the selected generation-replication tolerance requires primary
+effects within **12 percentage points absolute**, the same positive direction
+and all original gates, including the 20-point minimum gain, in **both** runs. Document
 who is independent of whom, artifacts and commands. The signed release review,
 not a boolean command-line switch, determines whether `SUPPORTED` is justified.
 If reproduction is missing, unavailable or disagrees, retain `UNVERIFIED`/failed

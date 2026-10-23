@@ -54,6 +54,13 @@ Matthew approved **480 evaluation questions: 120 answerable, 240 absent,
 120 contradictory**, and a **20-percentage-point minimum absolute improvement**
 on 22 October 2026. See the [decision record](APPROVALS.md).
 
+The follow-up implementation retains A’s single-call 1,024-output-token cap and
+the common 8,192-total-token ceiling, explicitly selects full prior outputs for
+both critic arms, and widens replication agreement to **12 percentage points
+absolute**. Both runs must still satisfy all original pass gates. The
+`dev2-001-v0.2-draft` checkpoint remains unfrozen because the holdout and
+model/adapter/scoring pins are missing.
+
 The 60-item development target and independent-family minima remain proposed.
 Do not pad the corpus with paraphrases. If the approved mix cannot be curated,
 document the gap and obtain a revised design **before** freeze.

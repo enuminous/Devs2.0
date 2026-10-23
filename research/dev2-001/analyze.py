@@ -74,6 +74,9 @@ def verdict(effect, interval, ratio, quality, thresholds):
 
 
 def analyze(scored, config, thresholds):
+    from core import TOKEN_RATIO_DENOMINATOR
+    if config["budget"].get("token_ratio_denominator") != TOKEN_RATIO_DENOMINATOR:
+        raise ValueError("unsupported or unpinned token ratio denominator")
     rows, manifest = scored["rows"], scored["manifest"]
     expected_arms = set(config["arms"])
     byq = defaultdict(list)
@@ -152,10 +155,16 @@ def analyze(scored, config, thresholds):
             "verdict": decision if official else "UNVERIFIED",
             "diagnostic_rule_outcome": decision, "primary": primary, "arms": stats,
             "token_ratio_C_over_A": ratio, "strict_equal_spend_sensitivity": ratio <= 1.0,
+            "token_ratio_denominator": config["budget"]["token_ratio_denominator"],
             "quality_guardrails_pass": quality, "secondary_exploratory": secondary,
             "primary_scope": "one prespecified paired contrast; no multiple-primary selection",
             "scoring_disagreement_count": scored["scoring"]["disagreement_count"],
             "independent_replication": "NOT ESTABLISHED BY THIS SCRIPT",
+            "replication_criteria": {
+                "max_absolute_effect_difference": thresholds["replication_effect_tolerance"],
+                "same_positive_direction": True, "all_original_gates_in_both_runs": True,
+                "deterministic_analysis_tolerance": thresholds["deterministic_analysis_tolerance"],
+                "independent_generation_scoring_and_signed_review_required": True},
             "physics_validation": False,
             "scored_sha256": digest(scored)}
 

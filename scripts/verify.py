@@ -12,6 +12,7 @@ def run(cmd): subprocess.run(cmd,cwd=ROOT,check=True)
 
 def main():
     run([sys.executable,'-m','unittest','discover','-s','research/dev2-001/tests','-v'])
+    run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_*.py','-v'])
     run(['node','--test','tests/engine.test.mjs'])
     run([sys.executable,'scripts/build_site.py'])
     run([sys.executable,'bench.py','doctor'])

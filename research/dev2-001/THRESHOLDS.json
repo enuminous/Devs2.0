@@ -27,7 +27,7 @@
   "min_conflict_report": 0.7,
   "bootstrap_draws": 20000,
   "analysis_seed": 20261022,
-  "replication_effect_tolerance": 0.05,
+  "replication_effect_tolerance": 0.12,
   "deterministic_analysis_tolerance": 1e-12,
   "primary": "C vs A absent-tier family-macro false-assertion difference A minus C",
   "interval": "paired evidence-family percentile bootstrap 95%",
@@ -49,7 +49,7 @@
       60
     ]
   },
-  "approval_scope_note": "Top-level approved_by, approved_at, approval_reference and recommendation_only describe full-protocol approval. The parameter_approvals below record the two approved selections; remaining proposed settings and freeze are not approved.",
+  "approval_scope_note": "Top-level approval fields describe the final sealed experimental package, which does not yet exist. parameter_approvals records Matthew's explicit mix and margin selections. design_followup records choices made under his instruction to implement Boardy's fixes and freeze; missing held-out data and runtime/scoring pins prevent that freeze. No additional generic permission to make these fixes is required.",
   "parameter_approvals": {
     "evaluation_counts": {
       "value": {
@@ -69,5 +69,18 @@
       "date_timezone": "America/Los_Angeles",
       "approval_reference": "APPROVALS.md#decision-2026-10-22-evaluation-mix-and-minimum-improvement"
     }
+  },
+  "design_followup": {
+    "recorded_date_utc": "2026-10-23",
+    "authorization": "Matthew requested the resource/context fixes, a replication tolerance around 12 to 15 percentage points, then freeze and tag.",
+    "implementation_choices": {
+      "arm_A_generated_token_cap": 1024,
+      "common_total_token_cap": 8192,
+      "stage_context_policy": "full_prior_outputs_v1",
+      "replication_effect_tolerance": 0.12
+    },
+    "choice_basis": "Retain existing resource ceilings and full prior outputs; select the stricter 12-point edge of the requested 12-to-15-point range. Exact 12 was selected during implementation, not quoted as an explicit numerical reply from Matthew.",
+    "record": "APPROVALS.md#follow-up-resource-policy-and-replication",
+    "freeze_outcome": "BLOCKED: no reviewed held-out questions, pinned model/adapter, or independent scoring arrangements; publish a draft checkpoint only."
   }
 }

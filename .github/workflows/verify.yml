@@ -53,6 +53,21 @@ jobs:
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: _site
+  tag_draft_checkpoint:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && contains(github.event.head_commit.message, '[tag-dev2-001-v0.2-draft]')
+    needs: verify
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Tag the verified draft checkpoint without overwriting tags
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/tag_checkpoint.py --publish
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: verify

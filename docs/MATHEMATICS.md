@@ -45,7 +45,7 @@ A proposal contains an action identifier and revision. An authorized value conta
 
 For each stage s, Tₛ=Iₛ+Oₛ and 0≤Cₛ≤Iₛ, where C is cached input. Total spend is ΣTₛ. Cached input is still input, even if its monetary price differs. Generated reasoning tokens must be included in O. [`Budget.lean`](../Devs/Budget.lean) proves monotonic spending, a bounded next step when spent≤cap, and equality of the 256+256+512 and 1024 output pools. Correct provider tokenization and complete accounting remain empirical/interface obligations.
 
-All arms have the same **available** 8192-token total ceiling and 1024-token generation pool. They need not consume identical totals. The proposed efficiency ratio is C's total observed tokens divided by A's on the same complete roster. Median/p95 usage and cached totals are additionally reported. A 1.5× ceiling does not establish strict equal consumption; a separate 1.0× sensitivity is reported.
+All arms have the same **available** 8192-token total ceiling and 1024-token generation pool. They need not consume identical totals. A has one ordinary-answer call. C and E retain the entire question, evidence and all prior output texts at each stage (`full_prior_outputs_v1`); prior system prompts are not replayed. Every repeated token counts, and request journals retain the exact history at the time of each call. The proposed efficiency ratio is C's total observed tokens divided by A's on the same complete roster. Median/p95 usage and cached totals are additionally reported. A 1.5× ceiling does not establish strict equal consumption; a separate 1.0× sensitivity is reported.
 
 ## Paired benchmark estimand
 

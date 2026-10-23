@@ -1,6 +1,6 @@
 # Design comparison and approval status
 
-**22 October 2026: Matthew approved the 120 / 240 / 120 mix and 20-point minimum improvement. Other proposed settings remain pending; the experiment is not frozen.**
+**Matthew approved the 120 / 240 / 120 mix and 20-point minimum improvement on 22 October 2026. The follow-up implementation selects the resource/context policy and a 12-point replication tolerance; the experiment is not frozen.**
 
 ## Question allocation
 
@@ -98,9 +98,19 @@ work. Passing C versus A while tying D or E supplies no EFMW-specific advantage.
 
 Recommended additional guardrails, also unapproved: answerable success >=70%,
 no more than a 5-point drop versus A, and conflict reporting >=70%. These prevent
-success by universal refusal. A 5-point independent-replication tolerance is a
-prospective pragmatic threshold, not guaranteed reproducibility: choose it
-alongside expected variability before freezing.
+success by universal refusal. The follow-up selects a **12-point absolute
+independent-replication tolerance**, the stricter edge of Matthew's requested
+12–15-point range, replacing the original 5-point proposal. With n=240 independent
+absent families, effect .20 and discordance .50, one estimate has planning
+SE=sqrt((.50-.20²)/240)=4.38 points. Assuming independent estimates, their
+difference has SE=6.19 points. A normal approximation puts about 58%, 95% and
+98% of differences inside ±5, ±12 and ±15 points respectively. These are
+illustrations, not measured reproducibility rates; dependence between repeated
+runs on the same items changes the calculation. Family clustering, provider
+variability and rater variation also matter. Twelve points allows plausible
+sampling variation while being stricter than fifteen. Both runs must still pass
+the original 20-point, interval, utility and cost gates with the same positive
+direction. This agreement rule does not prove equivalence or interval coverage.
 
 ## Known-method comparison
 
@@ -119,7 +129,11 @@ these general methods, not claimed reproductions of those papers' full systems.
 Matthew's explicit selections on 22 October 2026 are recorded in
 [`APPROVALS.md`](APPROVALS.md) and `THRESHOLDS.json.parameter_approvals`:
 120 answerable / 240 absent / 120 contradictory questions, and a 20-percentage-point
-minimum absolute improvement. The alternatives above were not selected.
-The full protocol is still unapproved and unfrozen. Do not change `status` to
+minimum absolute improvement. The alternatives above were not selected. The
+follow-up instruction authorizes the resource/context fixes and widening the
+replication tolerance; their exact implementation is recorded in `APPROVALS.md`.
+Matthew also requested freeze and tagging, but the reviewed holdout and runtime/
+scoring pins do not yet exist. Publish a draft checkpoint, not a fictitious freeze.
+Do not change `status` to
 `FROZEN` until the remaining decisions and every gate in `REPRODUCIBILITY.md`
 are complete. Any later parameter revision needs its own prospective record.

@@ -1,0 +1,49 @@
+{
+  "experiment": "DEV2-001",
+  "status": "DRAFT_NOT_FROZEN",
+  "corpus_versions_verified": 10,
+  "development_questions": 12,
+  "heldout_questions": 0,
+  "blockers": [
+    "design is DRAFT; Matthew's approval and frozen thresholds are required",
+    "configuration remains DRAFT",
+    "model snapshot/tokenizer unpinned",
+    "model adapter unpinned",
+    "adapter dependency/environment lock missing",
+    "seed support and reasoning setting must be explicitly resolved",
+    "distinct operator and scoring custodian required",
+    "cost schedule unset",
+    "cost schedule provenance missing",
+    "held-out counts do not match approved design",
+    "insufficient independent evidence families: answerable",
+    "insufficient independent evidence families: absent",
+    "insufficient independent evidence families: contradictory",
+    "held-out custody/exposure attestation missing",
+    "blind retrieval coverage review missing"
+  ],
+  "model_experiment_executed": false,
+  "physics_validated": false,
+  "checkpoint_tag": "dev2-001-v0.2-draft",
+  "freeze_command_exit_code": 1,
+  "source_parent_commit": "24ee2190da0218917e48d88e4e067f9a2df74425",
+  "package_sha256": "95808d8eeba0d0e75302f501a730098010e07902896702e461be40d92540e570",
+  "config_sha256": "da9425cd319f5a4769604ee3f3518a6b203b8443972c988d40d0b4a29f468401",
+  "thresholds_sha256": "f26f913a265017283c07b31cfeb5ffd50475b812f99130f44d53bcc4bf46a7e2",
+  "software_verification": {
+    "benchmark_python_tests": 39,
+    "checkpoint_python_tests": 4,
+    "javascript_tests": 10,
+    "software_fixture": {
+      "kind": "SOFTWARE_SMOKE_ONLY",
+      "official": false,
+      "complete": true,
+      "questions": 12,
+      "responses": 60,
+      "human_scoring": "NOT PERFORMED; blank templates only",
+      "experimental_verdict": "UNVERIFIED",
+      "model_calls": 0,
+      "physics_validation": false
+    },
+    "interpretation": "Software checks only. Lean audit and publishing are independently checked by CI for the tagged commit."
+  }
+}

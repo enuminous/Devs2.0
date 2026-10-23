@@ -1,11 +1,14 @@
-# DEV2-001 executable protocol, draft v0.1
+# DEV2-001 executable protocol, draft v0.2
 
 **DRAFT, NOT FROZEN. No official result. Proposed settings are not adopted requirements.**
 
 **Decision update, 22 October 2026:** Matthew approved the 120 answerable /
 240 absent / 120 contradictory evaluation mix and 20-percentage-point minimum
 absolute improvement. See [APPROVALS.md](APPROVALS.md). Other proposed numerical
-settings and the complete freeze remain pending.
+settings and the complete freeze remain pending. The follow-up instruction adopts
+the resource/context choices below and a 12-point replication tolerance, selected
+within the requested 12–15-point range. The held-out set and runtime/scoring pins
+are still missing; `dev2-001-v0.2-draft` is a software/design checkpoint, not a freeze.
 
 ## 1. Target and limits
 
@@ -90,6 +93,15 @@ policy across arms. Calls have isolated state per item. Randomize arm order per
 question using the committed seed; no cross-item memory. Do not tune prompts on
 evaluation responses. Test schema and provider behavior on development only.
 
+The pinned `stage_context_policy` is `full_prior_outputs_v1` for both C and E.
+Each stage receives the same complete question and retrieved passages, plus all
+earlier stage outputs verbatim and in order: draft sees none, critic sees draft,
+revision sees draft and critic. Each call uses the common instructions and its
+own stage prompt; previous stages' system prompts are not replayed. This is the
+meaning of “full transcript” here. There is no compressed fixed state, hidden
+memory, additional retrieval or silent context truncation. Record an immutable
+snapshot of each actual request; future outputs must not enter earlier logs.
+
 No unseen special Zoo animal is claimed. The C critic is an explicitly specified
 operation: inspect each draft assertion against the same passages, enumerate
 unsupported/circular/conflicting support, then revise once. It is a tested
@@ -97,13 +109,15 @@ prompt intervention, not a certified execution of the full Zoo.
 
 ## 4. Honest resource comparison
 
-The proposed common per-item ceilings are 8,192 **total** input+output tokens and
+The selected common per-item ceilings are 8,192 **total** input+output tokens and
 1,024 generated tokens across all calls. Count repeated context, prompt text,
 cached input and reasoning tokens. Cached-input discounts change money, not
 token counts. Record provider usage, input counts, latency and the dated cost
 schedule. D and E receive the same ceilings as A/B/C.
 
-A/B/D can spend the generation pool in one call. C/E allocate 256/256/512 to
+Arm A is pinned to one ordinary-answer call with a 1,024-token output cap and
+the same 8,192-token total ceiling. A/B/D can spend the generation pool in one
+call. C/E allocate 256/256/512 to
 draft/critic/revision. All final answers are instructed to stay within 200 words.
 No extra call, retry, best-of selection, artificial padding or uncounted critic
 is permitted. Token exhaustion, truncation, malformed output and infrastructure
@@ -116,6 +130,9 @@ generation allowance. This draft instead equalizes the **total available pool**.
 The proposed 1.5× observed token ratio permits limited realized overhead; it is
 not exact equality of spent computation. Report actual totals and a strict
 1.0× sensitivity. If C only succeeds with more spend, the result must say that.
+The ratio denominator is A's **observed** input-plus-output tokens on the same
+complete roster, not its 8,192-token allowance. All repeated full-transcript input
+counts. Report mean, median and p95 usage as well as input/output/cached totals.
 Changing these allocations after evaluating the holdout requires a new study.
 
 ## 5. Scoring and estimand
@@ -154,7 +171,7 @@ support. Record optional confidence only if its event is clearly defined;
 calibration is exploratory and must report coverage, not compare selected
 confident responses as if they were complete samples.
 
-## 6. Decision rules: margin approved, remaining settings proposed
+## 6. Decision rules: margin and replication tolerance selected; freeze pending
 
 - **Pass pending replication:** observed primary improvement at least 0.20;
   lower 95% bound strictly above zero; mean total-token ratio C/A at most 1.5;
@@ -181,9 +198,13 @@ and a fresh holdout if responses were used to change prompts or design.
 
 `SUPPORTED` requires independent reproduction from the released package: an
 independent operator generates all arms, different independent raters score them,
-the primary effect is within 0.05 absolute of the original, both runs satisfy all
-gates, and deterministic reanalysis agrees within 1e-12. These tolerances are
-also proposed. An independent reviewer signs the evidence-linked release record.
+the primary effect differs from the original by **at most 0.12 absolute (12
+percentage points)**, the direction is positive in both, both runs satisfy all
+original gates, and deterministic reanalysis agrees within 1e-12. The widened
+replication tolerance does not lower the 20-point pass margin in either run.
+Report both complete intervals; interval overlap alone is not equivalence.
+The 12-point choice is prospective and has no observed outcomes behind it.
+An independent reviewer signs the evidence-linked release record.
 The analyzer cannot grant `SUPPORTED` by reading a boolean flag. Hosted models
 may not be bitwise deterministic; inability to access the same snapshot prevents
 full generation reproduction and must be reported.

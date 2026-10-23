@@ -1,6 +1,6 @@
 # DEV2-001 design decision record
 
-**22 October 2026 · Two parameters approved · Experiment remains DRAFT, NOT FROZEN**
+**Decisions and follow-up implementation · Experiment remains DRAFT, NOT FROZEN**
 
 ## Decision 2026-10-22: evaluation mix and minimum improvement
 
@@ -26,19 +26,51 @@ The alternatives in `DESIGN.md` remain documented but were not selected. The
 approved numerical values already matched the draft configuration, so this
 change records their approval without changing those values.
 
+## Follow-up: resource policy and replication
+
+Matthew subsequently instructed implementation of Boardy's suggested fixes:
+pin A's token budget, choose full transcript or fixed state for critic stages,
+widen replication tolerance to around 12–15 points, then freeze and tag.
+This authorizes the fixes and a valid freeze; no extra generic permission is
+needed. It does not supply missing questions, model pins or human assignments.
+
+The implementation records these choices on 2026-10-23 UTC:
+
+| Choice | Recorded implementation |
+|---|---|
+| Arm A | Retain one ordinary-answer call, output cap 1,024; common total input/output cap 8,192 |
+| Efficiency denominator | A's observed total tokens on the identical complete roster |
+| Critic context | `full_prior_outputs_v1` for both C and E: same question/evidence plus all earlier outputs; common/current stage instructions only |
+| Replication agreement | At most 0.12 absolute effect difference (12 percentage points), same positive direction and all original gates in both runs |
+
+Twelve points was selected during implementation as the stricter end of the
+requested range. It is not represented as an explicit exact-number reply from
+Matthew. The 5/12/15-point precision comparison is in `DESIGN.md`. The 20-point
+minimum gain is unchanged. No evaluation outcome informed these choices.
+
+The stage-history journal also required a correction: earlier request records
+shared a mutable list with later completions. Actual adapter inputs were correct,
+but their retained logs could acquire future outputs. Each call now retains its
+own prior-output snapshot, verified against the actual serialized-call boundary.
+
 ## Scope and remaining work
 
-This records approval of the **question counts and minimum absolute improvement**.
-It does not represent approval of every other proposed parameter or establish
-that the evaluation questions already exist. The additional failure rule, resource
-limits, utility guardrails, family-count minima and reproduction tolerances retain
-their separately identified proposed status. The original requirements for
-independence, equal-budget comparisons and reproducibility remain in force.
+The original numerical approvals and follow-up choices are distinct from sealing
+an executable experiment. The evaluation file still has zero questions; the
+model/tokenizer/adapter, prices, custody and independent scoring roles are unset.
+The original independence, equal-budget and reproducibility requirements remain
+in force. The remaining proposed guardrails must be included in the final sealed
+record; changing them or the approved mix requires a prospective decision.
 
 The full-protocol approval fields in `THRESHOLDS.json` remain unset and
-`recommendation_only` remains true for that complete rule package; the new
-`parameter_approvals` object identifies the two approved selections precisely.
+`recommendation_only` remains true for the incomplete package.
+`parameter_approvals` identifies the original two selections; `design_followup`
+records the later authorization and implementation choices without inventing
+approvals for inputs that do not exist.
 Both `CONFIG.json` and `THRESHOLDS.json` remain `DRAFT_NOT_FROZEN`.
+
+Freeze was requested but **cannot pass the readiness checks**. The tag
+`dev2-001-v0.2-draft` identifies only this tested design/software checkpoint.
 
 Before freeze, complete independently reviewed held-out questions, an authentic
 conflict inventory, pinned model/tokenizer/adapter, resource and price settings,

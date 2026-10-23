@@ -27,7 +27,8 @@
   "budget": {
     "total_tokens": 8192,
     "generated_tokens": 1024,
-    "accounting": "All input and output across all stages, including cached input and reasoning tokens; common ceilings; no retries."
+    "accounting": "All input and output across all stages, including cached input and reasoning tokens; common ceilings; no retries.",
+    "token_ratio_denominator": "observed_A_total_tokens_same_complete_roster"
   },
   "cost": {
     "currency": "USD",
@@ -97,5 +98,6 @@
         "output_cap": 512
       }
     ]
-  }
+  },
+  "stage_context_policy": "full_prior_outputs_v1"
 }

@@ -95,6 +95,21 @@ class CorpusTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "absence not checked"):
             validate_questions(data, self.docs, confirmatory=True)
 
+    def test_freeze_rejects_baseline_padding_or_unpinned_resource_policy(self):
+        for change, message in (
+            (lambda c: c["arms"]["A"].append(dict(c["arms"]["A"][0])), "Arm A"),
+            (lambda c: c.pop("stage_context_policy"), "context policy"),
+            (lambda c: c["budget"].update(token_ratio_denominator="allocated_cap"), "denominator"),
+        ):
+            c = copy.deepcopy(self.config); change(c)
+            errors = freeze_errors(c, read(ROOT/"THRESHOLDS.json"), read(ROOT/"QUESTIONS.json"), self.docs)
+            self.assertTrue(any(message in e for e in errors), errors)
+
+    def test_freeze_rejects_nonfinite_replication_tolerance(self):
+        t = read(ROOT/"THRESHOLDS.json"); t["replication_effect_tolerance"] = float("nan")
+        errors = freeze_errors(self.config, t, read(ROOT/"QUESTIONS.json"), self.docs)
+        self.assertTrue(any("replication tolerance" in e for e in errors))
+
     def test_unapproved_eval_runner_refuses_before_adapter(self):
         with tempfile.TemporaryDirectory() as t:
             adapter = Path(t)/"adapter.py"; adapter.write_text("raise Exception('must never run')")
@@ -118,6 +133,46 @@ class BudgetTests(unittest.TestCase):
             result = generate_item({"question": "fixture", "context": []}, "C", self.config(), None)
         self.assertEqual(len(result["calls"]), 3)
         self.assertEqual((result["input_tokens"], result["output_tokens"], result["cached_input_tokens"]), (300,60,30))
+
+    def test_full_prior_outputs_journal_matches_inputs_actually_sent(self):
+        for arm in "CE":
+            sent = []
+            def capture(adapter, request):
+                sent.append(copy.deepcopy(request))
+                response = self.fake(adapter, request)
+                if request["op"] == "generate":
+                    response["text"] = json.dumps({"answer": request["stage"], "citations": []})
+                return response
+            item = {"question": "fixture", "context": [{"doc_id": "fixture", "text": "evidence"}]}
+            with patch("run.invoke", capture):
+                result = generate_item(item, arm, self.config(), None)
+            self.assertEqual([len(c["request"]["input"]["prior_stages"]) for c in result["calls"]], [0,1,2])
+            for i, call in enumerate(result["calls"]):
+                self.assertEqual(call["request"], sent[2*i+1])
+                self.assertEqual(call["request"]["input"], sent[2*i]["input"])
+                payload = call["request"]["input"]
+                self.assertEqual(payload["question"], item["question"])
+                self.assertEqual(payload["context"], item["context"])
+                expected = [{"stage": prev["request"]["stage"], "text": prev["response"]["text"]}
+                            for prev in result["calls"][:i]]
+                self.assertEqual(payload["prior_stages"], expected)
+
+    def test_unsupported_context_policy_refuses_before_adapter(self):
+        c = self.config(); c["stage_context_policy"] = "compressed_fixed_state"
+        with patch("run.invoke") as adapter, self.assertRaisesRegex(ValueError, "context policy"):
+            generate_item({"question": "fixture", "context": []}, "C", c, None)
+        adapter.assert_not_called()
+
+    def test_arm_A_uses_one_call_with_shared_pool_and_total_ceiling(self):
+        c = self.config()
+        with patch("run.invoke", self.fake):
+            result = generate_item({"question": "fixture", "context": []}, "A", c, None)
+        self.assertEqual(len(result["calls"]), 1)
+        self.assertEqual(result["calls"][0]["request"]["max_output_tokens"], 1024)
+        c["budget"]["total_tokens"] = 150
+        with patch("run.invoke", self.fake):
+            result = generate_item({"question": "fixture", "context": []}, "A", c, None)
+        self.assertEqual(result["calls"][0]["request"]["max_output_tokens"], 50)
 
     def test_total_budget_blocks_extra_call(self):
         c = self.config(); c["budget"]["total_tokens"] = 150
@@ -222,6 +277,22 @@ class AnalysisTests(unittest.TestCase):
         scored=synthetic_scores();scored["rows"].pop()
         with self.assertRaisesRegex(ValueError,"missing or duplicate"):
             analyze(scored,read(ROOT/"CONFIG.json"),read(ROOT/"THRESHOLDS.json"))
+
+    def test_token_ratio_uses_observed_A_spend_across_same_roster(self):
+        scored = synthetic_scores()
+        for r in scored["rows"]:
+            if r["arm"] == "C": r["input_tokens"] = 200
+        t = read(ROOT/"THRESHOLDS.json"); t["bootstrap_draws"] = 100
+        result = analyze(scored, read(ROOT/"CONFIG.json"), t)
+        self.assertAlmostEqual(result["token_ratio_C_over_A"], 250/150)
+        self.assertEqual(result["diagnostic_rule_outcome"], "NARROWED")
+        self.assertEqual(result["replication_criteria"]["max_absolute_effect_difference"], .12)
+        self.assertEqual(result["verdict"], "UNVERIFIED")
+
+    def test_allocated_cap_cannot_replace_observed_denominator(self):
+        c = read(ROOT/"CONFIG.json"); c["budget"]["token_ratio_denominator"] = "allocated_cap"
+        with self.assertRaisesRegex(ValueError, "denominator"):
+            analyze(synthetic_scores(), c, read(ROOT/"THRESHOLDS.json"))
 
     def test_no_citations_is_undefined_not_perfect(self):
         scored=synthetic_scores()

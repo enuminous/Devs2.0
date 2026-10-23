@@ -10,7 +10,7 @@ import subprocess
 import sys
 import time
 from pathlib import Path
-from core import ROOT, corpus, digest, file_hash, freeze_errors, git, package_hash, read, validate_questions, write
+from core import ROOT, STAGE_CONTEXT_POLICY, corpus, digest, file_hash, freeze_errors, git, package_hash, read, validate_questions, write
 from prepare import prepare
 
 
@@ -24,13 +24,18 @@ def invoke(adapter, request):
 
 
 def generate_item(item, arm, config, adapter, calls=None):
+    if config.get("stage_context_policy") != STAGE_CONTEXT_POLICY:
+        raise ValueError("unsupported or unpinned stage context policy")
     history = []
     calls = [] if calls is None else calls
     budget = config["budget"]
     total_in = total_out = 0
     for stage in config["arms"][arm]:
         system = (ROOT/"arms/common.txt").read_text() + "\n" + (ROOT/"arms"/stage["prompt"]).read_text()
-        payload = {"question": item["question"], "context": item["context"], "prior_stages": history}
+        # Snapshot the history at this call. Later completions must never appear
+        # retroactively in the journal of inputs already sent to the adapter.
+        payload = {"question": item["question"], "context": item["context"],
+                   "prior_stages": [dict(previous) for previous in history]}
         request = {"model": config["model"], "system": system, "input": payload,
                    "seed": config["generation_seed"], "stage": stage["name"]}
         counted = invoke(adapter, dict(request, op="count"))
@@ -66,6 +71,8 @@ def generate_item(item, arm, config, adapter, calls=None):
 
 
 def run(data, config, adapter, out):
+    if config.get("stage_context_policy") != STAGE_CONTEXT_POLICY:
+        raise ValueError("unsupported or unpinned stage context policy")
     docs = corpus()
     validate_questions(data, docs)
     confirmatory = data["split"] == "evaluation"
@@ -91,7 +98,8 @@ def run(data, config, adapter, out):
                 "questions_sha256": digest(data), "config_sha256": digest(config),
                 "thresholds_sha256": file_hash(ROOT/"THRESHOLDS.json"),
                 "adapter_sha256": file_hash(adapter), "operator": config["operator"],
-                "model": config["model"], "started_utc_unix": time.time(), "complete": False}
+                "model": config["model"], "stage_context_policy": config["stage_context_policy"],
+                "budget": config["budget"], "started_utc_unix": time.time(), "complete": False}
     write(out/"manifest.json", manifest)
     rng = random.Random(config["order_seed"])
     records = []
