@@ -70,6 +70,7 @@ def build():
         assert a['quote'] in '\n'.join(d['lines'][start:a['end']]).replace('**','')
     proofs=catalog()
     data=dict(documents=documents,config=config,thresholds=thresholds,proofs=proofs,
+              sourceCorrections=json.loads((ROOT/'web/source-corrections.json').read_text()),
               blockers=freeze_errors(config,thresholds,read(BENCH/'QUESTIONS.json'),{d['id']:d for d in documents}),
               answers=answers,paper=(ROOT/'Devs2.0-EFMW.md').read_text(),
               prompts={p.name:p.read_text() for p in sorted((BENCH/'arms').glob('*.txt'))})

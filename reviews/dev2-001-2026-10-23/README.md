@@ -9,6 +9,10 @@ the same snapshot named in the already-sent request. New packet files are outsid
 the benchmark corpus; the ten-version corpus, prompts, thresholds and empty holdout
 are unchanged.
 
+**Author clarification:** Matthew does not personally know Ryan
+(`ryansctt1994-sudo`). See the [Weaver OS source correction](SOURCE_CORRECTIONS.md)
+before interpreting the older relationship wording in the pinned paper.
+
 ## Reviewer handoff
 
 1. Read [scope and deliverables](SCOPE.md), then the pinned protocol, scoring manual,
