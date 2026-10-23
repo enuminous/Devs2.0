@@ -1,0 +1,106 @@
+{
+  "repository": "enuminous/papers",
+  "through_commit": "f1c8f5d15e873174bad25a018adadd71557cb659",
+  "paths": [
+    {
+      "path": "Devs2.0-EFMW.md",
+      "changes": [
+        {
+          "commit": "1b8b1f85f145736b7dcf7fd173fcf6b1109e0ca6",
+          "subject": "Add unfrozen DEV2-001 reproducible benchmark draft",
+          "change_kind": "revision"
+        },
+        {
+          "commit": "999bc947404c1ee0dcc39d29257e42e01218ece5",
+          "subject": "Add white paper on Devs 2.0: EFMW",
+          "change_kind": "initial_addition"
+        }
+      ]
+    },
+    {
+      "path": "EFMW-C1-Scalar-Continuum-Bridge.md",
+      "changes": [
+        {
+          "commit": "d279d1159a0f0fd9334248cae55197310111bcac",
+          "subject": "Publish paper on the verified C1 scalar continuum bridge",
+          "change_kind": "initial_addition"
+        }
+      ]
+    },
+    {
+      "path": "EFMW-F001-Recursive-Coherence-Dynamics.md",
+      "changes": [
+        {
+          "commit": "898df718b3ce55b85220e1c7a20fecce1a9789a6",
+          "subject": "Publish EFMW-F001 falsifiable recursive coherence estimator specification",
+          "change_kind": "initial_addition"
+        }
+      ]
+    },
+    {
+      "path": "EFMW-Zoo-R001-Primordial-Recursion-Boundary.md",
+      "changes": [
+        {
+          "commit": "471a9a245e1da09f44f2ec2cb4a12b7c86f77069",
+          "subject": "Derive and verify nonzero local two-scalar energy-flow vorticity with frozen ablations and isotropic orientation controls",
+          "change_kind": "revision"
+        },
+        {
+          "commit": "a10f4b35235d815997cf81c1dd7481b732d507be",
+          "subject": "Integrate CMB alignment provenance audit, WMAP reproduction, and frozen null controls",
+          "change_kind": "revision"
+        },
+        {
+          "commit": "2e7d8136cb3af4f008f4ca1a80b47b5e562d280e",
+          "subject": "Add Zoo R-001 primordial recursion boundary analytic paper",
+          "change_kind": "initial_addition"
+        }
+      ]
+    },
+    {
+      "path": "ME-003_Flat_Minkowski_Specialization_Discovery.md",
+      "changes": [
+        {
+          "commit": "56f7d321b19abd63161b743c24fcb0ea3b73c444",
+          "subject": "Correct wave-operator citation in ME-003 paper",
+          "change_kind": "revision"
+        },
+        {
+          "commit": "107fed78a58285a38fb979b09edb93cc07f2e78f",
+          "subject": "Add ME-003 flat Minkowski discovery paper",
+          "change_kind": "initial_addition"
+        }
+      ]
+    },
+    {
+      "path": "Recursive-Coherence-Monitoring-Synthetic-Control-Degradation.md",
+      "changes": [
+        {
+          "commit": "10a02ba70ef1793042305168954d32a2046ea507",
+          "subject": "Add recursive coherence monitoring paper",
+          "change_kind": "initial_addition"
+        }
+      ]
+    },
+    {
+      "path": "WORLD-GRID-005-Equal-Budget-Negative-Result.md",
+      "changes": [
+        {
+          "commit": "ec12d1acf12d24f0bf8a0eacc552db514aeb6023",
+          "subject": "Publish WORLD-GRID-005 equal-budget negative-result paper",
+          "change_kind": "initial_addition"
+        }
+      ]
+    },
+    {
+      "path": "Weaver-OS-EFMW-Residual-Core-Formalization.md",
+      "changes": [
+        {
+          "commit": "6aa593708afef2e86862f79b74b85906f4ddfad6",
+          "subject": "Add source-pinned paper on Weaver OS EFMW residual formalization",
+          "change_kind": "initial_addition"
+        }
+      ]
+    }
+  ]
+}

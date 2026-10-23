@@ -1,0 +1,114 @@
+{
+  "status": "PLANNING_ONLY",
+  "assumptions": "one independent question per family; normal approximation; excludes budget, utility and replication gates",
+  "rows": [
+    {
+      "counts_A_B_C": [
+        160,
+        160,
+        160
+      ],
+      "absent_independent_families": 160,
+      "assumed_gain": 0.1,
+      "assumed_pair_discordance": 0.5,
+      "approx_ci95_half_width": 0.10846612374377541,
+      "approx_probability_meeting_20pp_and_positive_CI": 0.03537990740152863
+    },
+    {
+      "counts_A_B_C": [
+        160,
+        160,
+        160
+      ],
+      "absent_independent_families": 160,
+      "assumed_gain": 0.2,
+      "assumed_pair_discordance": 0.5,
+      "approx_ci95_half_width": 0.10509329188868335,
+      "approx_probability_meeting_20pp_and_positive_CI": 0.5
+    },
+    {
+      "counts_A_B_C": [
+        160,
+        160,
+        160
+      ],
+      "absent_independent_families": 160,
+      "assumed_gain": 0.3,
+      "assumed_pair_discordance": 0.5,
+      "approx_ci95_half_width": 0.09921743798345128,
+      "approx_probability_meeting_20pp_and_positive_CI": 0.9758919694574641
+    },
+    {
+      "counts_A_B_C": [
+        120,
+        240,
+        120
+      ],
+      "absent_independent_families": 240,
+      "assumed_gain": 0.1,
+      "assumed_pair_discordance": 0.5,
+      "approx_ci95_half_width": 0.08856221918327625,
+      "approx_probability_meeting_20pp_and_positive_CI": 0.01344422705187287
+    },
+    {
+      "counts_A_B_C": [
+        120,
+        240,
+        120
+      ],
+      "absent_independent_families": 240,
+      "assumed_gain": 0.2,
+      "assumed_pair_discordance": 0.5,
+      "approx_ci95_half_width": 0.08580831350554949,
+      "approx_probability_meeting_20pp_and_positive_CI": 0.5
+    },
+    {
+      "counts_A_B_C": [
+        120,
+        240,
+        120
+      ],
+      "absent_independent_families": 240,
+      "assumed_gain": 0.3,
+      "assumed_pair_discordance": 0.5,
+      "approx_ci95_half_width": 0.08101069888189667,
+      "approx_probability_meeting_20pp_and_positive_CI": 0.9922276489785278
+    },
+    {
+      "counts_A_B_C": [
+        60,
+        360,
+        60
+      ],
+      "absent_independent_families": 360,
+      "assumed_gain": 0.1,
+      "assumed_pair_discordance": 0.5,
+      "approx_ci95_half_width": 0.07231074916251694,
+      "approx_probability_meeting_20pp_and_positive_CI": 0.003358852287731251
+    },
+    {
+      "counts_A_B_C": [
+        60,
+        360,
+        60
+      ],
+      "absent_independent_families": 360,
+      "assumed_gain": 0.2,
+      "assumed_pair_discordance": 0.5,
+      "approx_ci95_half_width": 0.07006219459245557,
+      "approx_probability_meeting_20pp_and_positive_CI": 0.5
+    },
+    {
+      "counts_A_B_C": [
+        60,
+        360,
+        60
+      ],
+      "absent_independent_families": 360,
+      "assumed_gain": 0.3,
+      "assumed_pair_discordance": 0.5,
+      "approx_ci95_half_width": 0.06614495865563419,
+      "approx_probability_meeting_20pp_and_positive_CI": 0.9984776511649883
+    }
+  ]
+}

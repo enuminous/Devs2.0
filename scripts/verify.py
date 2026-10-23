@@ -11,6 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def run(cmd): subprocess.run(cmd,cwd=ROOT,check=True)
 
 def main():
+    run([sys.executable,'reviews/dev2-001-2026-10-23/verify_packet.py'])
     run([sys.executable,'-m','unittest','discover','-s','research/dev2-001/tests','-v'])
     run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_*.py','-v'])
     run(['node','--test','tests/engine.test.mjs'])

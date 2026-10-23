@@ -1,0 +1,26 @@
+{
+  "experiment": "DEV2-001",
+  "status": "DRAFT_NOT_FROZEN",
+  "corpus_versions_verified": 10,
+  "development_questions": 12,
+  "heldout_questions": 0,
+  "blockers": [
+    "design is DRAFT; Matthew's approval and frozen thresholds are required",
+    "configuration remains DRAFT",
+    "model snapshot/tokenizer unpinned",
+    "model adapter unpinned",
+    "adapter dependency/environment lock missing",
+    "seed support and reasoning setting must be explicitly resolved",
+    "distinct operator and scoring custodian required",
+    "cost schedule unset",
+    "cost schedule provenance missing",
+    "held-out counts do not match approved design",
+    "insufficient independent evidence families: answerable",
+    "insufficient independent evidence families: absent",
+    "insufficient independent evidence families: contradictory",
+    "held-out custody/exposure attestation missing",
+    "blind retrieval coverage review missing"
+  ],
+  "model_experiment_executed": false,
+  "physics_validated": false
+}

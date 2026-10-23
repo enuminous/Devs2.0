@@ -1,0 +1,93 @@
+{
+  "repository": "enuminous/Devs2.0",
+  "baseline_commit": "f6a4f30c55190e1eff0026ea3f1f004ec34b363a",
+  "corpus_manifest_sha256": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+  "sha256": {
+    "research/dev2-001/APPROVALS.md": "0f36d2f184bf0779d66da7ed71744e201eb908bc165f7d49181149a59dc4d05b",
+    "research/dev2-001/CONFIG.json": "46736195c1c2e4a22f6a69861091b06dfad9f76f3836e56dc62493c82bb14a8e",
+    "research/dev2-001/CORPUS.json": "8430ddbd8360f4a2e84f30d139c9a06de5338117bc845425f091abe637e0c8f0",
+    "research/dev2-001/DESIGN.md": "d49745d7ea326d9b24ddbeee655c35f441d249093a439040795f0bd38e72a37f",
+    "research/dev2-001/PROTOCOL.md": "3fee9b2427bb7cca95b80ad2165894a15ee065dbba6eee1fdfc8c0775d8639bd",
+    "research/dev2-001/QUESTIONS.json": "7046c7cacfd6963371ada0c2fd3857c2d80db3f1b3d7adbf74cfb625179350af",
+    "research/dev2-001/QUESTIONS.schema.json": "00c51669cd151c9c6d0e679350f689d2607f0974790f3ad889a23e3142932381",
+    "research/dev2-001/README.md": "179671accbf6f247c1646aa4cab09d74608e763d4c0456f45217bbdcb1d6d7e2",
+    "research/dev2-001/REPRODUCIBILITY.md": "793a42b915f2be9e7a8fab8703e8063502be19f4f7f64c87b74e8c27f30849ca",
+    "research/dev2-001/RUN.md": "12924550ee48642ced2e75c79f19950a91cdd9f7fd515b430040f425cb39a32a",
+    "research/dev2-001/SCORING.md": "62cc568035cbad9ae99a53f8051044d70214ea22e6c86b1798c75f31efe5d706",
+    "research/dev2-001/SOURCE_AUDIT.md": "2a34e45914e564dd97ada62b4ce9c68797259c804b482108b79bbd27220deb3f",
+    "research/dev2-001/THRESHOLDS.json": "6430051435293628a4b0a0ff7d6dcbfb3661d24e077b51e723c5bcfab46d0ff9",
+    "research/dev2-001/adapters/fixture.py": "49084660eec2f1b5625b83bdcde56ee93b4528014f40f9918327ad2db9ecadd1",
+    "research/dev2-001/adapters/gateway.py": "d7bee94bc7d8374f77b0a28d305a536015f199ff372273ffcf6f11ba1a4e5391",
+    "research/dev2-001/analyze.py": "6ca42b01f02c711f28acccec832e2ea9e82d2321ed27f16ccb484492bbd05dfe",
+    "research/dev2-001/arms/A-plain.txt": "e7894aa6ba737f87bdd78abc27cc02dfecc9044646b616220b20a9ce659d50b8",
+    "research/dev2-001/arms/B-status.txt": "791908b5d03dd25c4c4db833579ef845b9cea3634aed42049a6ba66de5accbbd",
+    "research/dev2-001/arms/C-critic.txt": "4dfceca3e156a9541bf32b931fd9043425d52086d3eca6f88481bc6feacab8cc",
+    "research/dev2-001/arms/C-revise.txt": "04c12a7ea1337a4a1c040032e677deb29c785e950f4e6a40affc26f3676c8bda",
+    "research/dev2-001/arms/D-cite-abstain.txt": "96bc6da01290d6e27b42be2dc0715339b01b964992a789b51bdb2c2dd46d9b87",
+    "research/dev2-001/arms/E-feedback.txt": "cf590361f6c174fcce4550a74821e85ea05f16a1a22073508364392ca931c403",
+    "research/dev2-001/arms/E-revise.txt": "da372aeae2d649ff5d22174935078fd366f1e7321cdfbcf099dcbd3bbbc1e575",
+    "research/dev2-001/arms/common.txt": "1dd4f329b189d92eac568e3066feae4ac31a9503c38413e1fcacc445e7f1671b",
+    "research/dev2-001/core.py": "f8dd086916adc65597a6a15e91647d72139b31103da02a4bd8051f84dc213dbf",
+    "research/dev2-001/corpus/continuum.md": "dd08f3fff4c401b36184826e11f576931f561837e05db125c3a7de50fe42b74d",
+    "research/dev2-001/corpus/devs.md": "c643d706741632c94ad7115d9ecf6f5f3241ecda46f1f8d1c8508a687b16c175",
+    "research/dev2-001/corpus/f001.md": "b1c6ed2705cf4e255618b44d192a751ad440e3c6090b5977f4d646fe4a83ce9e",
+    "research/dev2-001/corpus/grid005.md": "640db39d98acba1bc81613e728b1085c986524ae45f449faf7c7082dc51c5e54",
+    "research/dev2-001/corpus/me003-initial.md": "1272961ae9787b666a08f8aca6841a243a4ddb1506d7bc6803249f4b1b9e8122",
+    "research/dev2-001/corpus/me003.md": "93ae2ce4924adfb52796466f79ebc3396489ef66f949cc05b7fa4c113efa61d3",
+    "research/dev2-001/corpus/monitoring.md": "f2f11c9dfb53db3539e54e188bf7b37bc9e2f96f8109d462b784461a565510f1",
+    "research/dev2-001/corpus/r001-initial.md": "b66e488996bf0362bfc584381d74085f6a6c3ace3f333d5c856c7e63eb462f77",
+    "research/dev2-001/corpus/r001.md": "1f852f46a9730bfcdca365d8d7f34362d56e8e7744eb2fa2481545eb6f7437ef",
+    "research/dev2-001/corpus/weaver.md": "b7a3716c4c3a6f18a4d7cc57e940a6ff318caaf4a838549505f956ed6a0a6fe2",
+    "research/dev2-001/development/QUESTIONS.json": "cc96aa0c1360a86f253462d08c14c26004ce75b06ef80e2e45192a9ee1410484",
+    "research/dev2-001/planning.py": "07376938006f11c6c824bd7eb32aa9a0051b685ad8dc0a27ce651df413a9f4fc",
+    "research/dev2-001/prepare.py": "252c764d62047edd6f3a8844b902ba27d48249a0d86d9462db74822a20037f14",
+    "research/dev2-001/run.py": "c2865a46c9ac53f746ea71a0c383e2d497a487656e483229e36814419ee3298d",
+    "research/dev2-001/score.py": "4c7e6764e8156522f7d4624e3c55ca647e7f0433b88a9a652f8e54343bb68cf0",
+    "research/dev2-001/tests/test_dev2.py": "f7aeffc3979a866ff38c14d1989de4479ade63b6c65c34f408639072b9386404",
+    "research/dev2-001/tests/test_transport.py": "52f34b2e0972238c3ec85fbe06e70ff30d506e7dd66c83f81c9b298a90d4c9eb"
+  },
+  "review_only_version_snapshots": {
+    "evidence/2e7d8136-EFMW-Zoo-R001-Primordial-Recursion-Boundary.md": {
+      "repository": "enuminous/papers",
+      "commit": "2e7d8136cb3af4f008f4ca1a80b47b5e562d280e",
+      "path": "EFMW-Zoo-R001-Primordial-Recursion-Boundary.md",
+      "sha256": "b66e488996bf0362bfc584381d74085f6a6c3ace3f333d5c856c7e63eb462f77"
+    },
+    "evidence/a10f4b35-EFMW-Zoo-R001-Primordial-Recursion-Boundary.md": {
+      "repository": "enuminous/papers",
+      "commit": "a10f4b35235d815997cf81c1dd7481b732d507be",
+      "path": "EFMW-Zoo-R001-Primordial-Recursion-Boundary.md",
+      "sha256": "f2f1b1476e7bd8e62a285bd12bf82e6ea6cba7c028fcaa1f7c7c095cef1116ec"
+    },
+    "evidence/471a9a24-EFMW-Zoo-R001-Primordial-Recursion-Boundary.md": {
+      "repository": "enuminous/papers",
+      "commit": "471a9a245e1da09f44f2ec2cb4a12b7c86f77069",
+      "path": "EFMW-Zoo-R001-Primordial-Recursion-Boundary.md",
+      "sha256": "1f852f46a9730bfcdca365d8d7f34362d56e8e7744eb2fa2481545eb6f7437ef"
+    },
+    "evidence/107fed78-ME-003_Flat_Minkowski_Specialization_Discovery.md": {
+      "repository": "enuminous/papers",
+      "commit": "107fed78a58285a38fb979b09edb93cc07f2e78f",
+      "path": "ME-003_Flat_Minkowski_Specialization_Discovery.md",
+      "sha256": "1272961ae9787b666a08f8aca6841a243a4ddb1506d7bc6803249f4b1b9e8122"
+    },
+    "evidence/56f7d321-ME-003_Flat_Minkowski_Specialization_Discovery.md": {
+      "repository": "enuminous/papers",
+      "commit": "56f7d321b19abd63161b743c24fcb0ea3b73c444",
+      "path": "ME-003_Flat_Minkowski_Specialization_Discovery.md",
+      "sha256": "93ae2ce4924adfb52796466f79ebc3396489ef66f949cc05b7fa4c113efa61d3"
+    },
+    "evidence/999bc947-Devs2.0-EFMW.md": {
+      "repository": "enuminous/papers",
+      "commit": "999bc947404c1ee0dcc39d29257e42e01218ece5",
+      "path": "Devs2.0-EFMW.md",
+      "sha256": "c643d706741632c94ad7115d9ecf6f5f3241ecda46f1f8d1c8508a687b16c175"
+    },
+    "evidence/1b8b1f85-Devs2.0-EFMW.md": {
+      "repository": "enuminous/papers",
+      "commit": "1b8b1f85f145736b7dcf7fd173fcf6b1109e0ca6",
+      "path": "Devs2.0-EFMW.md",
+      "sha256": "e1394ecc1243bd53d7074238f142d2e09ddc9580ff1f905ab586621c1565919d"
+    }
+  }
+}

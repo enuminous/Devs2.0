@@ -42,6 +42,12 @@ The smoke command uses a deterministic **software fixture** and creates 60 respo
 
 ## Run the research protocol
 
+The [initial independent methods-review packet](reviews/dev2-001-2026-10-23/README.md)
+contains the 12-item development worksheet, source-history conflict screening,
+statistical review questions, reproduction checklist, and separate human-scoring
+scope. No authentic Tier C conflict was established by its bounded screen; human
+review fields remain blank and the experiment remains unfrozen.
+
 ```bash
 python3 bench.py doctor
 python3 bench.py prepare --out /tmp/devs2-development-plan.json

@@ -1,0 +1,1014 @@
+{
+  "status": "UNREVIEWED_DEVELOPMENT_ONLY",
+  "baseline_commit": "f6a4f30c55190e1eff0026ea3f1f004ec34b363a",
+  "preparer": "AI-assisted preparation for Matthew Chenoweth Wright; not independent human review",
+  "instructions": "Copy this worksheet for review; never overwrite original judgments. No response scoring is represented here.",
+  "items": [
+    {
+      "id": "d001",
+      "split": "development",
+      "proposed_tier": "answerable",
+      "existing_cluster_id": "dev-fact-001",
+      "question": "What name does the Devs 2.0 paper give to its objective for prediction?",
+      "proposed_gold_from_existing_package": {
+        "expected_behavior": "The paper calls its objective bounded foresight.",
+        "evidence": [
+          {
+            "doc_id": "devs",
+            "start_line": 18,
+            "end_line": 18,
+            "quote": "bounded foresight"
+          }
+        ],
+        "absence_audit": null,
+        "conflict_explanation": null
+      },
+      "source_document_dependency_group_for_review": "devs",
+      "other_items_sharing_that_document": [
+        "d002",
+        "d003",
+        "d007",
+        "d008",
+        "d009"
+      ],
+      "family_warning": "Shared source is a dependency lead, not proof of dependence or independence. Unique cluster IDs do not establish independent families.",
+      "original_review_state": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      },
+      "reviewer_1": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "reviewer_2": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "final_curator_resolution": null,
+      "eligible_for_holdout": false
+    },
+    {
+      "id": "d002",
+      "split": "development",
+      "proposed_tier": "answerable",
+      "existing_cluster_id": "dev-fact-002",
+      "question": "Which provenance statuses does the Devs 2.0 paper say the agent should distinguish?",
+      "proposed_gold_from_existing_package": {
+        "expected_behavior": "List all eight statuses as the paper's proposed vocabulary.",
+        "evidence": [
+          {
+            "doc_id": "devs",
+            "start_line": 206,
+            "end_line": 206,
+            "quote": "proposed, derived, simulated, observed, replicated, contradicted, superseded, and unknown"
+          }
+        ],
+        "absence_audit": null,
+        "conflict_explanation": null
+      },
+      "source_document_dependency_group_for_review": "devs",
+      "other_items_sharing_that_document": [
+        "d001",
+        "d003",
+        "d007",
+        "d008",
+        "d009"
+      ],
+      "family_warning": "Shared source is a dependency lead, not proof of dependence or independence. Unique cluster IDs do not establish independent families.",
+      "original_review_state": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      },
+      "reviewer_1": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "reviewer_2": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "final_curator_resolution": null,
+      "eligible_for_holdout": false
+    },
+    {
+      "id": "d003",
+      "split": "development",
+      "proposed_tier": "answerable",
+      "existing_cluster_id": "dev-fact-003",
+      "question": "What roles does the Devs 2.0 paper separate when discussing human agency?",
+      "proposed_gold_from_existing_package": {
+        "expected_behavior": "Distinguish these four roles.",
+        "evidence": [
+          {
+            "doc_id": "devs",
+            "start_line": 292,
+            "end_line": 292,
+            "quote": "prediction, recommendation, authorization, and action"
+          }
+        ],
+        "absence_audit": null,
+        "conflict_explanation": null
+      },
+      "source_document_dependency_group_for_review": "devs",
+      "other_items_sharing_that_document": [
+        "d001",
+        "d002",
+        "d007",
+        "d008",
+        "d009"
+      ],
+      "family_warning": "Shared source is a dependency lead, not proof of dependence or independence. Unique cluster IDs do not establish independent families.",
+      "original_review_state": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      },
+      "reviewer_1": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "reviewer_2": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "final_curator_resolution": null,
+      "eligible_for_holdout": false
+    },
+    {
+      "id": "d004",
+      "split": "development",
+      "proposed_tier": "answerable",
+      "existing_cluster_id": "dev-fact-004",
+      "question": "How many held-out scenario–seed pairs were used in WORLD-GRID-005?",
+      "proposed_gold_from_existing_package": {
+        "expected_behavior": "The report states 96; this is a report about a synthetic benchmark, not field validation.",
+        "evidence": [
+          {
+            "doc_id": "grid005",
+            "start_line": 9,
+            "end_line": 9,
+            "quote": "96 held-out scenario–seed pairs"
+          }
+        ],
+        "absence_audit": null,
+        "conflict_explanation": null
+      },
+      "source_document_dependency_group_for_review": "grid005",
+      "other_items_sharing_that_document": [
+        "d012"
+      ],
+      "family_warning": "Shared source is a dependency lead, not proof of dependence or independence. Unique cluster IDs do not establish independent families.",
+      "original_review_state": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      },
+      "reviewer_1": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "reviewer_2": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "final_curator_resolution": null,
+      "eligible_for_holdout": false
+    },
+    {
+      "id": "d005",
+      "split": "development",
+      "proposed_tier": "answerable",
+      "existing_cluster_id": "dev-fact-005",
+      "question": "What range does the F001 specification give for its coherence value?",
+      "proposed_gold_from_existing_package": {
+        "expected_behavior": "The specification gives a positive value at most one under its stated assumptions.",
+        "evidence": [
+          {
+            "doc_id": "f001",
+            "start_line": 48,
+            "end_line": 48,
+            "quote": "0<C_k<=1"
+          }
+        ],
+        "absence_audit": null,
+        "conflict_explanation": null
+      },
+      "source_document_dependency_group_for_review": "f001",
+      "other_items_sharing_that_document": [
+        "d010",
+        "d011"
+      ],
+      "family_warning": "Shared source is a dependency lead, not proof of dependence or independence. Unique cluster IDs do not establish independent families.",
+      "original_review_state": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      },
+      "reviewer_1": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "reviewer_2": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "final_curator_resolution": null,
+      "eligible_for_holdout": false
+    },
+    {
+      "id": "d006",
+      "split": "development",
+      "proposed_tier": "answerable",
+      "existing_cluster_id": "dev-fact-006",
+      "question": "What does the R-001 paper say its rotational-amplitude ansatz does to rotation?",
+      "proposed_gold_from_existing_package": {
+        "expected_behavior": "It propagates a supplied rotation amplitude and does not generate rotation from zero.",
+        "evidence": [
+          {
+            "doc_id": "r001",
+            "start_line": 69,
+            "end_line": 69,
+            "quote": "The ansatz inherits but does not create rotation."
+          }
+        ],
+        "absence_audit": null,
+        "conflict_explanation": null
+      },
+      "source_document_dependency_group_for_review": "r001",
+      "other_items_sharing_that_document": [],
+      "family_warning": "Shared source is a dependency lead, not proof of dependence or independence. Unique cluster IDs do not establish independent families.",
+      "original_review_state": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      },
+      "reviewer_1": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "reviewer_2": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "final_curator_resolution": null,
+      "eligible_for_holdout": false
+    },
+    {
+      "id": "d007",
+      "split": "development",
+      "proposed_tier": "absent",
+      "existing_cluster_id": "dev-fact-007",
+      "question": "What random seed is specified for evaluating the Devs 2.0 architecture?",
+      "proposed_gold_from_existing_package": {
+        "expected_behavior": "State that the requested value/result is not established by the supplied corpus; do not invent it or equate absence with zero. Correct a false premise if a source supports the correction.",
+        "evidence": [],
+        "absence_audit": {
+          "queries": [
+            "DEV2",
+            "seed"
+          ],
+          "literal_search_hits": {
+            "devs": [],
+            "f001": [
+              57,
+              63
+            ],
+            "grid005": [
+              9,
+              58,
+              125,
+              129
+            ],
+            "r001": [
+              102,
+              127
+            ],
+            "me003": [],
+            "continuum": [],
+            "monitoring": [
+              9,
+              52,
+              56,
+              60,
+              74,
+              84,
+              86,
+              96,
+              104
+            ],
+            "weaver": [],
+            "r001-initial": [
+              102
+            ],
+            "me003-initial": []
+          },
+          "documents_reviewed": [
+            "devs",
+            "f001",
+            "grid005",
+            "r001",
+            "me003",
+            "continuum",
+            "monitoring",
+            "weaver",
+            "r001-initial",
+            "me003-initial"
+          ],
+          "manual_semantic_review": false,
+          "limitations": "Draft candidate only. Lexical searching does not establish semantic absence; independent reviewers must reject or revise ambiguous items."
+        },
+        "conflict_explanation": null
+      },
+      "source_document_dependency_group_for_review": "devs",
+      "other_items_sharing_that_document": [
+        "d001",
+        "d002",
+        "d003",
+        "d008",
+        "d009"
+      ],
+      "family_warning": "Shared source is a dependency lead, not proof of dependence or independence. Unique cluster IDs do not establish independent families.",
+      "original_review_state": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      },
+      "reviewer_1": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "reviewer_2": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "final_curator_resolution": null,
+      "eligible_for_holdout": false
+    },
+    {
+      "id": "d008",
+      "split": "development",
+      "proposed_tier": "absent",
+      "existing_cluster_id": "dev-fact-008",
+      "question": "Which tokenizer version is specified for measuring Monolithic Agent benchmark costs?",
+      "proposed_gold_from_existing_package": {
+        "expected_behavior": "State that the requested value/result is not established by the supplied corpus; do not invent it or equate absence with zero. Correct a false premise if a source supports the correction.",
+        "evidence": [],
+        "absence_audit": {
+          "queries": [
+            "tokenizer",
+            "cost"
+          ],
+          "literal_search_hits": {
+            "devs": [],
+            "f001": [
+              57
+            ],
+            "grid005": [],
+            "r001": [],
+            "me003": [],
+            "continuum": [],
+            "monitoring": [],
+            "weaver": [],
+            "r001-initial": [],
+            "me003-initial": []
+          },
+          "documents_reviewed": [
+            "devs",
+            "f001",
+            "grid005",
+            "r001",
+            "me003",
+            "continuum",
+            "monitoring",
+            "weaver",
+            "r001-initial",
+            "me003-initial"
+          ],
+          "manual_semantic_review": false,
+          "limitations": "Draft candidate only. Lexical searching does not establish semantic absence; independent reviewers must reject or revise ambiguous items."
+        },
+        "conflict_explanation": null
+      },
+      "source_document_dependency_group_for_review": "devs",
+      "other_items_sharing_that_document": [
+        "d001",
+        "d002",
+        "d003",
+        "d007",
+        "d009"
+      ],
+      "family_warning": "Shared source is a dependency lead, not proof of dependence or independence. Unique cluster IDs do not establish independent families.",
+      "original_review_state": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      },
+      "reviewer_1": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "reviewer_2": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "final_curator_resolution": null,
+      "eligible_for_holdout": false
+    },
+    {
+      "id": "d009",
+      "split": "development",
+      "proposed_tier": "absent",
+      "existing_cluster_id": "dev-fact-009",
+      "question": "What response-latency target, in milliseconds, is specified for the Monolithic Agent?",
+      "proposed_gold_from_existing_package": {
+        "expected_behavior": "State that the requested value/result is not established by the supplied corpus; do not invent it or equate absence with zero. Correct a false premise if a source supports the correction.",
+        "evidence": [],
+        "absence_audit": {
+          "queries": [
+            "latency",
+            "milliseconds"
+          ],
+          "literal_search_hits": {
+            "devs": [],
+            "f001": [
+              57
+            ],
+            "grid005": [],
+            "r001": [],
+            "me003": [],
+            "continuum": [],
+            "monitoring": [],
+            "weaver": [],
+            "r001-initial": [],
+            "me003-initial": []
+          },
+          "documents_reviewed": [
+            "devs",
+            "f001",
+            "grid005",
+            "r001",
+            "me003",
+            "continuum",
+            "monitoring",
+            "weaver",
+            "r001-initial",
+            "me003-initial"
+          ],
+          "manual_semantic_review": false,
+          "limitations": "Draft candidate only. Lexical searching does not establish semantic absence; independent reviewers must reject or revise ambiguous items."
+        },
+        "conflict_explanation": null
+      },
+      "source_document_dependency_group_for_review": "devs",
+      "other_items_sharing_that_document": [
+        "d001",
+        "d002",
+        "d003",
+        "d007",
+        "d008"
+      ],
+      "family_warning": "Shared source is a dependency lead, not proof of dependence or independence. Unique cluster IDs do not establish independent families.",
+      "original_review_state": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      },
+      "reviewer_1": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "reviewer_2": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "final_curator_resolution": null,
+      "eligible_for_holdout": false
+    },
+    {
+      "id": "d010",
+      "split": "development",
+      "proposed_tier": "absent",
+      "existing_cluster_id": "dev-fact-010",
+      "question": "What sampling interval in seconds is assigned to the F001 discrete state updates?",
+      "proposed_gold_from_existing_package": {
+        "expected_behavior": "State that the requested value/result is not established by the supplied corpus; do not invent it or equate absence with zero. Correct a false premise if a source supports the correction.",
+        "evidence": [],
+        "absence_audit": {
+          "queries": [
+            "sampling",
+            "interval",
+            "seconds"
+          ],
+          "literal_search_hits": {
+            "devs": [],
+            "f001": [
+              57
+            ],
+            "grid005": [
+              9,
+              15,
+              87,
+              125
+            ],
+            "r001": [],
+            "me003": [],
+            "continuum": [],
+            "monitoring": [
+              9,
+              68,
+              70,
+              74,
+              76,
+              78
+            ],
+            "weaver": [
+              15,
+              91,
+              147,
+              167,
+              219
+            ],
+            "r001-initial": [],
+            "me003-initial": []
+          },
+          "documents_reviewed": [
+            "devs",
+            "f001",
+            "grid005",
+            "r001",
+            "me003",
+            "continuum",
+            "monitoring",
+            "weaver",
+            "r001-initial",
+            "me003-initial"
+          ],
+          "manual_semantic_review": false,
+          "limitations": "Draft candidate only. Lexical searching does not establish semantic absence; independent reviewers must reject or revise ambiguous items."
+        },
+        "conflict_explanation": null
+      },
+      "source_document_dependency_group_for_review": "f001",
+      "other_items_sharing_that_document": [
+        "d005",
+        "d011"
+      ],
+      "family_warning": "Shared source is a dependency lead, not proof of dependence or independence. Unique cluster IDs do not establish independent families.",
+      "original_review_state": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      },
+      "reviewer_1": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "reviewer_2": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "final_curator_resolution": null,
+      "eligible_for_holdout": false
+    },
+    {
+      "id": "d011",
+      "split": "development",
+      "proposed_tier": "absent",
+      "existing_cluster_id": "dev-fact-011",
+      "question": "What numerical value is assigned to the F001 persistent-change alarm threshold?",
+      "proposed_gold_from_existing_package": {
+        "expected_behavior": "State that the requested value/result is not established by the supplied corpus; do not invent it or equate absence with zero. Correct a false premise if a source supports the correction.",
+        "evidence": [],
+        "absence_audit": {
+          "queries": [
+            "q_*",
+            "threshold"
+          ],
+          "literal_search_hits": {
+            "devs": [],
+            "f001": [
+              33,
+              35
+            ],
+            "grid005": [],
+            "r001": [],
+            "me003": [],
+            "continuum": [],
+            "monitoring": [
+              9,
+              15,
+              17,
+              46,
+              52,
+              56,
+              60,
+              72,
+              78,
+              100
+            ],
+            "weaver": [
+              69,
+              177,
+              223
+            ],
+            "r001-initial": [],
+            "me003-initial": []
+          },
+          "documents_reviewed": [
+            "devs",
+            "f001",
+            "grid005",
+            "r001",
+            "me003",
+            "continuum",
+            "monitoring",
+            "weaver",
+            "r001-initial",
+            "me003-initial"
+          ],
+          "manual_semantic_review": false,
+          "limitations": "Draft candidate only. Lexical searching does not establish semantic absence; independent reviewers must reject or revise ambiguous items."
+        },
+        "conflict_explanation": null
+      },
+      "source_document_dependency_group_for_review": "f001",
+      "other_items_sharing_that_document": [
+        "d005",
+        "d010"
+      ],
+      "family_warning": "Shared source is a dependency lead, not proof of dependence or independence. Unique cluster IDs do not establish independent families.",
+      "original_review_state": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      },
+      "reviewer_1": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "reviewer_2": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "final_curator_resolution": null,
+      "eligible_for_holdout": false
+    },
+    {
+      "id": "d012",
+      "split": "development",
+      "proposed_tier": "absent",
+      "existing_cluster_id": "dev-fact-012",
+      "question": "What energy storage capacity, in megawatt-hours, was assigned to each WORLD-GRID-005 storage site?",
+      "proposed_gold_from_existing_package": {
+        "expected_behavior": "State that the requested value/result is not established by the supplied corpus; do not invent it or equate absence with zero. Correct a false premise if a source supports the correction.",
+        "evidence": [],
+        "absence_audit": {
+          "queries": [
+            "megawatt",
+            "MWh",
+            "capacity"
+          ],
+          "literal_search_hits": {
+            "devs": [],
+            "f001": [],
+            "grid005": [
+              9
+            ],
+            "r001": [],
+            "me003": [],
+            "continuum": [],
+            "monitoring": [],
+            "weaver": [],
+            "r001-initial": [],
+            "me003-initial": []
+          },
+          "documents_reviewed": [
+            "devs",
+            "f001",
+            "grid005",
+            "r001",
+            "me003",
+            "continuum",
+            "monitoring",
+            "weaver",
+            "r001-initial",
+            "me003-initial"
+          ],
+          "manual_semantic_review": false,
+          "limitations": "Draft candidate only. Lexical searching does not establish semantic absence; independent reviewers must reject or revise ambiguous items."
+        },
+        "conflict_explanation": null
+      },
+      "source_document_dependency_group_for_review": "grid005",
+      "other_items_sharing_that_document": [
+        "d004"
+      ],
+      "family_warning": "Shared source is a dependency lead, not proof of dependence or independence. Unique cluster IDs do not establish independent families.",
+      "original_review_state": {
+        "approved": false,
+        "reviewers": [],
+        "independent_humans": false,
+        "no_category_cues": false,
+        "semantic_split_checked": false
+      },
+      "reviewer_1": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "reviewer_2": {
+        "reviewer_id": null,
+        "reviewed_at": null,
+        "independence_declaration_reference": null,
+        "tier_eligible": null,
+        "support_or_absence_semantically_checked": null,
+        "same_referent_and_conditions": null,
+        "wording_neutral": null,
+        "family_assignment_accepted": null,
+        "split_overlap_checked": null,
+        "retrieval_coverage_checked": null,
+        "decision": null,
+        "rationale": null,
+        "requested_changes": null
+      },
+      "final_curator_resolution": null,
+      "eligible_for_holdout": false
+    }
+  ]
+}
