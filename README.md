@@ -1,5 +1,29 @@
 # Devs 2.0 — Research Desktop
 
+<!-- ENUMINOUS-UNIFIED-NAV:START -->
+## Repository navigation
+
+**eNuminous network:** [All public repositories](https://github.com/enuminous/EFMW/blob/main/REPOSITORY_NAVIGATION.md) · [EFMW](https://github.com/enuminous/EFMW) · [102 equations](https://github.com/enuminous/Monolithic_102_EFMW) · [Frozen Lean](https://github.com/enuminous/Monolithic-102-Zoo-Lean4) · [Zoo](https://github.com/enuminous/Tortoise) · [Papers](https://github.com/enuminous/papers) · [Quantum geometry](https://github.com/enuminous/Base888-Quantum-Geometry)
+
+**This project:** [Repository home](https://github.com/enuminous/Devs2.0) · [Subject index](https://github.com/enuminous/EFMW/blob/main/REPOSITORY_NAVIGATION.md#simulators-computation-and-experiments)
+
+<details open>
+<summary><strong>On this page</strong></summary>
+
+- [Use the desktop](#use-the-desktop)
+- [Build and verify](#build-and-verify)
+- [Run the research protocol](#run-the-research-protocol)
+- [What the formal work establishes](#what-the-formal-work-establishes)
+
+
+</details>
+
+**Related repositories:** [EFMW-EXP-001](https://github.com/enuminous/EFMW-EXP-001) · [Coherence-Prediction-Engine](https://github.com/enuminous/Coherence-Prediction-Engine) · [papers](https://github.com/enuminous/papers) · [EFMW](https://github.com/enuminous/EFMW) · [P-NP](https://github.com/enuminous/P-NP) · [oph-lab](https://github.com/enuminous/oph-lab) · [EFMW-Rule30](https://github.com/enuminous/EFMW-Rule30) · [OpenAI-math](https://github.com/enuminous/OpenAI-math)
+
+> **Evidence boundary:** A link between projects is navigation, not an assertion of proven equivalence, experimental validation, or shared authorship. See each repository’s own status and review notes.
+<!-- ENUMINOUS-UNIFIED-NAV:END -->
+
+
 [Open the desktop](https://enuminous.github.io/Devs2.0/) · [White paper](Devs2.0-EFMW.md) · [Mathematics](docs/MATHEMATICS.md) · [DEV2-001](research/dev2-001/README.md) · [Build checks](https://github.com/enuminous/Devs2.0/actions)
 
 A self-contained browser workspace for Matthew Chenoweth Wright's **Devs 2.0: EFMW**: a versioned corpus assistant, explicit uncertainty, inspectable criticism, human agency, and a reproducible architecture benchmark. The original research remains in [enuminous/papers](https://github.com/enuminous/papers/blob/f1c8f5d15e873174bad25a018adadd71557cb659/Devs2.0-EFMW.md).
