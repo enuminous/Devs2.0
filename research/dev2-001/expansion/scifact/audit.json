@@ -1,0 +1,44 @@
+{
+  "dataset": "SciFact",
+  "archive_sha256": "11c621288d41ac144d29b13b0f8503b3820b7d6e8b1f6ff24dff335c196d76be",
+  "counts": {
+    "corpus_abstracts": 5183,
+    "train_claims": 809,
+    "dev_claims": 300,
+    "unlabeled_test_claims": 300,
+    "train_dev_labels": {
+      "CONTRADICT": 237,
+      "NOINFO": 416,
+      "SUPPORT": 456
+    },
+    "train_dev_unique_citation_sets_by_label": {
+      "CONTRADICT": 199,
+      "NOINFO": 242,
+      "SUPPORT": 362
+    },
+    "development_candidate_mix": {
+      "CONTRADICT": 120,
+      "NOINFO": 240,
+      "SUPPORT": 120
+    },
+    "unlabeled_test_pool": 300
+  },
+  "candidate_selection": {
+    "seed": "DEV2-SCIFACT-PUBLIC-DEV-2026-11-08",
+    "targets": {
+      "SUPPORT": 120,
+      "NOINFO": 240,
+      "CONTRADICT": 120
+    },
+    "exact_citation_set_reuse_across_selected_rows": 0,
+    "semantic_independence": "NOT ESTABLISHED; overlapping source-document dependencies require two human reviewers",
+    "use": "development / public diagnostic only; source labels are public"
+  },
+  "limitations": [
+    "The SciFact claim-verification task differs from the original corpus-QA task.",
+    "NOINFO means no evidence was annotated in the cited abstracts; scope is limited to those abstracts.",
+    "The 300 test claims are unlabeled and have no cited_doc_ids in the release.",
+    "Public train/dev claims and labels are not an untouched holdout.",
+    "No user/model calls, ratings, or confirmatory experiment are performed by this script."
+  ]
+}

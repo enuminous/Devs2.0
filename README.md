@@ -24,7 +24,7 @@
 <!-- ENUMINOUS-UNIFIED-NAV:END -->
 
 
-[Open the desktop](https://enuminous.github.io/Devs2.0/) · [White paper](Devs2.0-EFMW.md) · [Mathematics](docs/MATHEMATICS.md) · [DEV2-001](research/dev2-001/README.md) · [Build checks](https://github.com/enuminous/Devs2.0/actions)
+[Open the desktop](https://enuminous.github.io/Devs2.0/) · [White paper](Devs2.0-EFMW.md) · [Mathematics](docs/MATHEMATICS.md) · [Complete equation ledger](docs/DEVS2-EQUATION-SET.md) · [DEV2-001](research/dev2-001/README.md) · [SciFact corpus extension](research/dev2-001/expansion/scifact/README.md) · [Build checks](https://github.com/enuminous/Devs2.0/actions)
 
 A self-contained browser workspace for Matthew Chenoweth Wright's **Devs 2.0: EFMW**: a versioned corpus assistant, explicit uncertainty, inspectable criticism, human agency, and a reproducible architecture benchmark. The original research remains in [enuminous/papers](https://github.com/enuminous/papers/blob/f1c8f5d15e873174bad25a018adadd71557cb659/Devs2.0-EFMW.md).
 
@@ -88,6 +88,8 @@ The full package includes question schema, split/leakage validation, immutable c
 ## What the formal work establishes
 
 The Lean project proves properties of explicit mathematical models: intersection and expansion of possibility sets; provenance/status distinctions and ranked dependency acyclicity; integer-weight updates; conditional criticism guarantees and counterexamples; revision-bound authorization; token arithmetic; and logical benchmark gates. These are conventional mathematical formalizations of architectural ideas. They are not a formalization of all EFMW physics, a correctness proof of Python/JavaScript, an accuracy theorem for a model, or proof of novelty. The mathematical companion states these boundaries individually.
+
+The [complete operational equation ledger](docs/DEVS2-EQUATION-SET.md) formalizes the paper's distributed knowledge, possibility, prediction, criticism, feedback, evidence, and human-agency architecture. The paper does not determine a unique physical or numerical model; the ledger makes that boundary explicit. A separate [SciFact extension](research/dev2-001/expansion/scifact/README.md) adds 480 public development candidates and an unlabeled test-candidate pool without changing the canonical DEV2-001 corpus or experiment.
 
 [Architecture](docs/ARCHITECTURE.md) · [Verification scope](verification/README.md) · [Import provenance](IMPORT.json) · [Changes from the source package](docs/IMPORT.md)
 

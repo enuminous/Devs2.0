@@ -15,6 +15,8 @@ It does **not** validate EFMW physics, demonstrate a new law, or establish novel
 - [Reproducibility guide](REPRODUCIBILITY.md): exact commands, adapter contract and freeze procedure.
 - [Run report template](RUN.md): a report to complete only after a real run.
 - [Source and reuse audit](SOURCE_AUDIT.md): existing work, scoped search and evidence boundaries.
+- [Expanded equation ledger](../../docs/DEVS2-EQUATION-SET.md): the full operational architecture, with derivations, existing proof boundaries and open empirical obligations.
+- [SciFact corpus extension](expansion/scifact/README.md): public development candidates and an unlabeled claim pool, kept separate from the canonical DEV2-001 corpus.
 
 `CORPUS.json` pins ten document versions by full Git commit and SHA-256. The
 current-document anchor is `c4e9d7cf4a2dbf6646aaf45f39d75593fa674331`.
@@ -75,3 +77,20 @@ reviewed holdout, pinned model/adapter, price schedule, retrieval coverage revie
 human scoring roles and approval of the remaining design rules must also be committed first.
 The analyzer never automatically issues `SUPPORTED`; independent reproduction
 and a reviewed release record are required.
+
+### Separate public corpus extension
+
+The SciFact package contains a deterministic **public development sample** of
+120 answerable / 240 absent / 120 contradictory claim-verification items and 300
+unlabeled test claims. This is an additional, explicitly different task: an
+“absent” item means that the cited abstracts do not establish the claim, and a
+“contradictory” item is based on cited-abstract evidence. These meanings do not
+meet the original protocol's dated-version conflict definition for Tier C.
+
+The sample is public and cannot be treated as an untouched holdout. Exact cited
+document sets are deduplicated across selected tiers; semantic and overlapping
+document-family independence remain unreviewed. No SciFact item has been copied
+into `CORPUS.json` or `QUESTIONS.json`. Confirmatory use needs an explicit
+protocol amendment, two independent item/family reviews, a separate scoring
+custodian, and the remaining freeze approvals. See the extension's README and
+machine-readable `audit.json`.

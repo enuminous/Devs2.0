@@ -1,6 +1,6 @@
 # Mathematical companion to Devs 2.0
 
-**Scope:** architectural models, not a physical theory. The September paper is a conceptual proposal, not a complete system of equations. The definitions below are new, explicit operationalizations using conventional set theory, likelihood updating, graph order, filtering, and paired statistics. They do not establish novelty. Each theorem is visible in [`theorems.json`](theorems.json), the desktop, and the corresponding Lean source.
+**Scope:** architectural models, not a physical theory. The September paper is a conceptual proposal, not a complete system of equations. The [complete operational equation ledger](DEVS2-EQUATION-SET.md) lays out the full architecture and marks which pieces are already represented here, which are derived identities, and which are proposed interfaces. The definitions below are the Lean-backed mathematical companion; they use conventional set theory, likelihood updating, graph order, filtering, and paired statistics and do not establish novelty. Each theorem is visible in [`theorems.json`](theorems.json), the desktop, and the corresponding Lean source.
 
 ## Possibilities and CollapseΩ
 
