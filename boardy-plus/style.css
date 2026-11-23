@@ -1,0 +1,33 @@
+:root { color-scheme:dark; font: 16px/1.55 system-ui,sans-serif; color:#ebf1ed; background:#121815; --mint:#a6f0c1; --line:#3c4c43; --panel:#1b2520; }
+* { box-sizing:border-box; }
+body { margin:0; }
+header,main { padding:1.2rem clamp(1rem,5vw,5rem); }
+header { display:flex; flex-wrap:wrap; justify-content:space-between; gap:.8rem; border-bottom:1px solid var(--line); }
+header span,.muted { color:#bbccc2; }
+a { color:var(--mint); }
+main { max-width:92rem; margin:auto; }
+h1,h2,h3,p { margin-top:0; }
+h1 { font-size:clamp(3rem,9vw,6rem); letter-spacing:-.08em; margin-bottom:.2rem; line-height:1.05; }
+h1 span,.eyebrow { color:var(--mint); }
+.intro { margin:1.6rem 0; }
+.notice { color:#ffda9d; }
+.workspace { display:grid; grid-template-columns:minmax(12rem,16rem) minmax(0,1fr); gap:1rem; }
+aside,.session,.protocol { background:var(--panel); border:1px solid var(--line); padding:1.2rem; border-radius:1rem; }
+aside h2 { font-size:1.05rem; margin:1.5rem 0 .4rem; }
+button,select { display:block; width:100%; margin:.5rem 0; padding:.55rem; background:#27362e; color:inherit; border:1px solid #607367; border-radius:.35rem; font:inherit; }
+button { cursor:pointer; } button:disabled { opacity:.5; cursor:default; }
+fieldset { border:1px solid var(--line); margin:0 0 .7rem; }
+fieldset label { display:block; margin:.35rem 0; }
+.pair,.counts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.8rem; }
+.pair section,.counts div { background:#141d18; padding:1rem; border-radius:.6rem; }
+ol { padding-left:1.5rem; margin-bottom:0; } li + li { margin-top:1rem; }
+li p { margin:.2rem 0; }
+details { border-block:1px solid var(--line); padding:.6rem 0; margin-bottom:.8rem; }
+summary { cursor:pointer; }
+details p { margin:.6rem 0; }
+#outcome { margin-top:1rem; border-left:3px solid var(--mint); padding:.6rem .8rem; }
+#outcome p:last-child { margin-bottom:0; }
+.protocol { margin:1rem 0; } .counts { margin-bottom:1rem; } .counts strong { display:block; color:var(--mint); }
+.skip { position:absolute; left:-10000px; } .skip:focus { left:1rem; background:#121815; }
+:focus-visible { outline:2px solid var(--mint); outline-offset:3px; }
+@media (max-width:700px) { .workspace,.pair { grid-template-columns:1fr; } }

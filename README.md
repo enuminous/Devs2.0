@@ -24,6 +24,10 @@
 <!-- ENUMINOUS-UNIFIED-NAV:END -->
 
 
+### Boardy+ session simulator
+
+[Open Boardy+ on GitHub Pages](https://enuminous.github.io/Devs2.0/boardy-plus/) or open `boardy-plus/index.html` locally. Replay paired fictional Boardy sessions against shared evidence, toggle provenance, criticism and revision, and export the scripted transcript. The examples include successes and failures. See [simulator scope](boardy-plus/README.md) for how the controls relate to DEV2-001.
+
 [Open the desktop](https://enuminous.github.io/Devs2.0/) · [White paper](Devs2.0-EFMW.md) · [Mathematics](docs/MATHEMATICS.md) · [DEV2-001](research/dev2-001/README.md) · [Build checks](https://github.com/enuminous/Devs2.0/actions)
 
 A self-contained browser workspace for Matthew Chenoweth Wright's **Devs 2.0: EFMW**: a versioned corpus assistant, explicit uncertainty, inspectable criticism, human agency, and a reproducible architecture benchmark. The original research remains in [enuminous/papers](https://github.com/enuminous/papers/blob/f1c8f5d15e873174bad25a018adadd71557cb659/Devs2.0-EFMW.md).

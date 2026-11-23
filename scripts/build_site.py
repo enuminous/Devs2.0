@@ -1,6 +1,7 @@
 """Generate a self-contained index.html from the tracked, audited sources."""
 import json
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -83,6 +84,7 @@ def build():
     (ROOT/'_site').mkdir(exist_ok=True)
     (ROOT/'_site/index.html').write_text(html)
     (ROOT/'_site/.nojekyll').write_text('')
+    shutil.copytree(ROOT/'boardy-plus', ROOT/'_site/boardy-plus', dirs_exist_ok=True)
     (ROOT/'docs').mkdir(exist_ok=True)
     (ROOT/'docs/theorems.json').write_text(json.dumps(proofs,indent=2)+'\n')
     audit='import Devs\n\n'+'\n'.join('#print axioms '+p['qualified'] for p in proofs)+'\n'

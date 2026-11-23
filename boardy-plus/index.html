@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Boardy+ · Devs 2.0 Session Simulator</title>
+<link rel="stylesheet" href="style.css">
+<script src="sessions.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to session</a>
+<header><a href="../index.html">← Devs 2.0</a><span>DEV2-001 · Draft, not frozen or run</span></header>
+<main id="main">
+<section class="intro">
+<h1>Boardy<span>+</span></h1>
+<p>Replay fictional Boardy sessions with and without the Devs 2.0 layer. Each pair sees the same question and evidence.</p>
+<p class="notice">Scripted simulation. No live Boardy connection, held-out families, or measured benchmark outcomes.</p>
+</section>
+<div class="workspace">
+<aside>
+<label for="family">Example family</label>
+<select id="family"></select>
+<button id="next" type="button">Next stage</button>
+<button id="reset" type="button">Reset replay</button>
+<button id="export" type="button">Download session JSON</button>
+<h2>Ablation controls</h2>
+<fieldset id="controls"><legend>Compare stages</legend>
+<label><input type="checkbox" id="provenance" checked> Provenance</label>
+<label><input type="checkbox" id="criticism" checked> Adversarial criticism</label>
+<label><input type="checkbox" id="revision" checked> Revision</label>
+</fieldset>
+<p class="muted">These controls illustrate proposed comparisons. The protocol defines arms A–E separately.</p>
+</aside>
+<section class="session" aria-label="Session">
+<p id="category" class="eyebrow"></p>
+<h2 id="question"></h2>
+<details open><summary>Shared evidence</summary><div id="evidence"></div></details>
+<p id="progress" role="status"></p>
+<div class="pair">
+<section><h3>Boardy · without layer</h3><ol id="baseline"></ol></section>
+<section><h3>Boardy+ · with layer</h3><ol id="layer"></ol></section>
+</div>
+<section id="outcome" hidden><h3>Scripted findings</h3><p id="finding"></p><p id="note"></p></section>
+</section>
+</div>
+<section class="protocol"><h2>DEV2-001 design</h2>
+<div class="counts"><div><strong>120</strong> Answerable</div><div><strong>240</strong> Absent</div><div><strong>120</strong> Contradictory</div><div><strong>20 points</strong> Minimum absolute improvement</div></div>
+<p>Primary comparison: paired evidence-family false-assertion rates on absent questions, arm A minus arm C. The draft also requires a confidence interval excluding zero, resource limits, and answerable and conflict guardrails. Retain negative and positive outcomes together.</p>
+<a href="https://github.com/enuminous/Devs2.0/blob/main/research/dev2-001/PROTOCOL.md">Read the benchmark protocol ↗</a>
+</section>
+</main>
+</body>
+</html>
